@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "232312643973",
+    "firebase_url": "https://brain-fa4e2.firebaseio.com",
+    "project_id": "brain-fa4e2",
+    "storage_bucket": "brain-fa4e2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:232312643973:android:79af6385ec1427b5f124ec",
+        "android_client_info": {
+          "package_name": "com.braindr.brain"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "232312643973-rcput8dp796qm9c0eq2j3uskf2arnqm7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA09VUPi3hOYqRKDp_dbv8DqaF9Pl06XNQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "232312643973-rcput8dp796qm9c0eq2j3uskf2arnqm7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
