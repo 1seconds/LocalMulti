@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Text;
-using BestHTTP;
 using UnityEngine.Networking;
 using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
@@ -356,9 +355,5 @@ public static class GameObjectExtensions {
         textEditor.text = str;
         textEditor.SelectAll();
         textEditor.Copy();
-    }
-    
-    public static string GetResponseText(this HTTPRequest www) {
-        return www.Response?.DataAsText;
     }
 }
