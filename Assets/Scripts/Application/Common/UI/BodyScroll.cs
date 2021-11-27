@@ -27,7 +27,7 @@ public class BodyScroll : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     }
 
     public void ScrollTo(int tabIndex, float duration = 0.4f) {
-        var toPos = -tabIndex * 720f;
+        var toPos = -tabIndex * 1280f;
         float fromRate = scrollH.GetScrollRate();
         float toRate = Mathf.Abs(toPos) / scrollH.GetScrollWidth();
 
@@ -52,7 +52,7 @@ public class BodyScroll : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
         Service.scene.Stop(moveRoutine);
         var scroll = scrollH.GetScroll();
-        dragStartingIndex = Mathf.Abs(Mathf.RoundToInt(scroll / 720f));
+        dragStartingIndex = Mathf.Abs(Mathf.RoundToInt(scroll / 1280f));
         onBeginDrag?.Invoke(dragStartingIndex);
         lastPos = data.position;
     }
@@ -70,7 +70,7 @@ public class BodyScroll : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     private void FireDragEvent() {
         var scroll = scrollH.GetScroll();
-        var index = Mathf.Abs(Mathf.FloorToInt(scroll / 720f));
+        var index = Mathf.Abs(Mathf.FloorToInt(scroll / 1280f));
         onDrag?.Invoke(index);
     }
 
@@ -85,14 +85,14 @@ public class BodyScroll : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         toScroll = Mathf.Min(0, toScroll);
         toScroll = Mathf.Max(-width, toScroll);
 
-        var tabIndex = Mathf.Abs(Mathf.RoundToInt(toScroll / 720f));
+        var tabIndex = Mathf.Abs(Mathf.RoundToInt(toScroll / 1280f));
         if (tabIndex < dragStartingIndex) {
             tabIndex = Mathf.Max(0, dragStartingIndex - 1);
         } else if (tabIndex > dragStartingIndex) {
             tabIndex = Mathf.Min(dragStartingIndex + 1, tabSize - 1);
         }
 
-        var toPos = -tabIndex * 720f;
+        var toPos = -tabIndex * 1280f;
         toPos = Mathf.Min(0, toPos);
         toPos = Mathf.Max(-width, toPos);
 
@@ -100,11 +100,11 @@ public class BodyScroll : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         float toRate = Mathf.Abs(toPos) / width;
 
         var vx = Mathf.Abs(velocity.x);
-        vx = Mathf.Min(720f, vx);
-        var durationScaler = 1 - (vx / 720f * 0.5f);
+        vx = Mathf.Min(1280f, vx);
+        var durationScaler = 1 - (vx / 1280f * 0.5f);
 
         float distance = Mathf.Abs(scroll - toPos);
-        var duration = distance / 720f * 0.7f * durationScaler;
+        var duration = distance / 1280f * 0.7f * durationScaler;
 
         Service.scene.Stop(moveRoutine);
         onStartMoveTo?.Invoke(tabIndex);
