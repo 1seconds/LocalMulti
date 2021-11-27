@@ -8,18 +8,27 @@ using UnityEngine;
 
 public class RuleService : Singleton<RuleService>, IService {
     public ServiceType type => ServiceType.Rule;
-    //public Dictionary<int, RuleWsStage> wsStages { get; private set; }
+    public Dictionary<int, Unit> units { get; private set; }
     public async Task<bool> Initialize(ServiceStatePresenter presenter) {
-        LoadLocalRules();
+        LoadUnitRule();
         return true;
     }
 
-    private void LoadLocalRules() {
-        
-        
-        //enStudies = new Dictionary<int, RuleEnStudy>();
-        //LoadLocalRule<RuleEnStudy>("EngStudy/Studies").ForEach(e => {
-        //    enStudies.Add(e.no, e);
-        //);
+    
+    private void LoadUnitRule() {
+        var text = PersistenceUtil.LoadTextResource("Rules/unit");
+        if (string.IsNullOrEmpty(text)) {
+            return;
+        }
+
+        units = new Dictionary<int, Unit>();
+        var parser = new CsvParser();
+        parser.Parse(text, "\t");
+
+        for (int index = 1; index < parser.Count; index++) {
+            var row = parser.GetRow(index);
+            var rule = new Unit(row);
+            units.Add(rule.code, rule);
+        }
     }
 }

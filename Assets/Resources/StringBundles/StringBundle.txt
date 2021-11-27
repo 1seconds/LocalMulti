@@ -1,0 +1,2 @@
+key	ko	en	ja	zh	ru	zh-hant	id
+common.version	버전	Version		版本	Версия	版本	Versi
