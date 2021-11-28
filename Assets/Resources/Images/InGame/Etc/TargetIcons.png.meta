@@ -1,0 +1,985 @@
+fileFormatVersion: 2
+guid: e03ffcf0e6b56334b900b7ca1ab903ad
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3625191410939746907
+    second: TargetIcons_0
+  - first:
+      213: -2525345079167609344
+    second: TargetIcons_1
+  - first:
+      213: -2494537602532665171
+    second: TargetIcons_2
+  - first:
+      213: 18780751124475366
+    second: TargetIcons_3
+  - first:
+      213: -6806482444771467717
+    second: TargetIcons_4
+  - first:
+      213: -3834009403397296655
+    second: TargetIcons_5
+  - first:
+      213: 1177182713266071185
+    second: TargetIcons_6
+  - first:
+      213: 6659913109223449514
+    second: TargetIcons_7
+  - first:
+      213: -1847602767534345215
+    second: TargetIcons_8
+  - first:
+      213: -394198496087024423
+    second: TargetIcons_9
+  - first:
+      213: -20030753621314195
+    second: TargetIcons_10
+  - first:
+      213: -7913975450437298383
+    second: TargetIcons_11
+  - first:
+      213: -5951007634604331253
+    second: TargetIcons_12
+  - first:
+      213: -9019909684486876290
+    second: TargetIcons_13
+  - first:
+      213: 6219185267388859970
+    second: TargetIcons_14
+  - first:
+      213: -7931220475955104358
+    second: TargetIcons_15
+  - first:
+      213: -5745710376295303581
+    second: TargetIcons_16
+  - first:
+      213: 4074068557946610174
+    second: TargetIcons_17
+  - first:
+      213: -829332985371463417
+    second: TargetIcons_18
+  - first:
+      213: -1561226199027467734
+    second: TargetIcons_19
+  - first:
+      213: -1723848469777688458
+    second: TargetIcons_20
+  - first:
+      213: -1379927875514708539
+    second: TargetIcons_21
+  - first:
+      213: 6686771294515104349
+    second: TargetIcons_22
+  - first:
+      213: -5168345940056130920
+    second: TargetIcons_23
+  - first:
+      213: 5343791470404833344
+    second: TargetIcons_24
+  - first:
+      213: -8042686836481053149
+    second: TargetIcons_25
+  - first:
+      213: 3036285894751169861
+    second: TargetIcons_26
+  - first:
+      213: -2749383150274361746
+    second: TargetIcons_27
+  - first:
+      213: -2346011147440815576
+    second: TargetIcons_28
+  - first:
+      213: -5831209162002763980
+    second: TargetIcons_29
+  - first:
+      213: -447381844905757353
+    second: TargetIcons_30
+  - first:
+      213: 1457435584476860494
+    second: TargetIcons_31
+  - first:
+      213: 7560476082474268499
+    second: TargetIcons_32
+  - first:
+      213: -3987250886337607520
+    second: TargetIcons_33
+  - first:
+      213: -3290143418662575202
+    second: TargetIcons_34
+  - first:
+      213: 6301224316081829727
+    second: TargetIcons_35
+  - first:
+      213: -2314744474321045790
+    second: TargetIcons_36
+  - first:
+      213: -6517126286263298782
+    second: TargetIcons_37
+  - first:
+      213: -7405974807009642492
+    second: TargetIcons_38
+  - first:
+      213: -4031704856679101628
+    second: TargetIcons_39
+  - first:
+      213: 6270700911123336781
+    second: TargetIcons_40
+  - first:
+      213: 5268993329555632931
+    second: TargetIcons_41
+  - first:
+      213: 3967320863104037035
+    second: TargetIcons_42
+  - first:
+      213: -1224939180348324813
+    second: TargetIcons_43
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TargetIcons_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 267
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a5a32c6e9bb0bdc0800000000000000
+      internalID: -3625191410939746907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_4
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 267
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3ed67d57448a81a0800000000000000
+      internalID: -6806482444771467717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_5
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 268
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fd2ff4d2ccdacac0800000000000000
+      internalID: -3834009403397296655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_6
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 267
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19664f3d071365010800000000000000
+      internalID: 1177182713266071185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_8
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 270
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 104361b621ffb56e0800000000000000
+      internalID: -1847602767534345215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_9
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 225
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc5dbd6e86878af0800000000000000
+      internalID: -394198496087024423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_10
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 226
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6571ddb226d8bff0800000000000000
+      internalID: -20030753621314195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_14
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 225
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2464e0fcc0cfe4650800000000000000
+      internalID: 6219185267388859970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_15
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 224
+        width: 35
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a95346f9ff4aee190800000000000000
+      internalID: -7931220475955104358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_16
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 224
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36674a6dad22340b0800000000000000
+      internalID: -5745710376295303581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_18
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 183
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7017b663b0e9d74f0800000000000000
+      internalID: -829332985371463417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_19
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 182
+        width: 35
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2a3fe03b09655ae0800000000000000
+      internalID: -1561226199027467734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_20
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 184
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 678dc4833f8a318e0800000000000000
+      internalID: -1723848469777688458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_21
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 180
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cd494c88e289dce0800000000000000
+      internalID: -1379927875514708539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_22
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 183
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5a0ad7701f2ccc50800000000000000
+      internalID: 6686771294515104349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_23
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 140
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89a3f9620c85648b0800000000000000
+      internalID: -5168345940056130920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_24
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 140
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0401e3b9706f82a40800000000000000
+      internalID: 5343791470404833344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_25
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 138
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32e26d72fe2a26090800000000000000
+      internalID: -8042686836481053149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_27
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 138
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e66c378779a38d9d0800000000000000
+      internalID: -2749383150274361746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_28
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 139
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8220fa58a4b417fd0800000000000000
+      internalID: -2346011147440815576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_29
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 96
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43f62d78922631fa0800000000000000
+      internalID: -5831209162002763980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_30
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 97
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 755fe6715949ac9f0800000000000000
+      internalID: -447381844905757353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_31
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 96
+        width: 31
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e40d1c731f9d93410800000000000000
+      internalID: 1457435584476860494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_32
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 97
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35737bc90f43ce860800000000000000
+      internalID: 7560476082474268499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_33
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 96
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a84c79b1707aa8c0800000000000000
+      internalID: -3987250886337607520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_34
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 54
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e93278e1eff0752d0800000000000000
+      internalID: -3290143418662575202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_35
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 52
+        width: 37
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f577c125122727750800000000000000
+      internalID: 6301224316081829727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_36
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 54
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e6bb462a2060efd0800000000000000
+      internalID: -2314744474321045790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_37
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 53
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2255aeefb248e85a0800000000000000
+      internalID: -6517126286263298782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_38
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 54
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 408b2bcc621b83990800000000000000
+      internalID: -7405974807009642492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_39
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 11
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44bcc623bc18c08c0800000000000000
+      internalID: -4031704856679101628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_40
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 10
+        width: 35
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4e893c4141060750800000000000000
+      internalID: 6270700911123336781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_41
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 8
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 323f01454893f1940800000000000000
+      internalID: 5268993329555632931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_42
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 10
+        width: 35
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba0ff432e41ce0730800000000000000
+      internalID: 3967320863104037035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TargetIcons_43
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 10
+        width: 35
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33441e33e44200fe0800000000000000
+      internalID: -1224939180348324813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

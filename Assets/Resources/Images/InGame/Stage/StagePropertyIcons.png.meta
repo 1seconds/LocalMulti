@@ -1,0 +1,622 @@
+fileFormatVersion: 2
+guid: 562dabddd348be54bb8e55a405572d82
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -764970406875662394
+    second: StagePropertyIcons_21
+  - first:
+      213: 8861865772602109769
+    second: StagePropertyIcons_1
+  - first:
+      213: 7726480932773323013
+    second: StagePropertyIcons_2
+  - first:
+      213: 4271043149012337065
+    second: StagePropertyIcons_3
+  - first:
+      213: 3379692811426065120
+    second: StagePropertyIcons_4
+  - first:
+      213: -7998606761464336489
+    second: StagePropertyIcons_5
+  - first:
+      213: -778778692414504222
+    second: StagePropertyIcons_6
+  - first:
+      213: -3897728325325692503
+    second: StagePropertyIcons_7
+  - first:
+      213: -3962464158866545774
+    second: StagePropertyIcons_8
+  - first:
+      213: 7298119316649235345
+    second: StagePropertyIcons_9
+  - first:
+      213: 2595535467109417590
+    second: StagePropertyIcons_10
+  - first:
+      213: -151222986899109093
+    second: StagePropertyIcons_11
+  - first:
+      213: -4896149618114140961
+    second: StagePropertyIcons_12
+  - first:
+      213: 7519941172186826265
+    second: StagePropertyIcons_13
+  - first:
+      213: -4936330011648006514
+    second: StagePropertyIcons_14
+  - first:
+      213: -6613222068942483603
+    second: StagePropertyIcons_15
+  - first:
+      213: 8137982537465221515
+    second: StagePropertyIcons_16
+  - first:
+      213: -1209241442125403530
+    second: StagePropertyIcons_17
+  - first:
+      213: 4110084093065851981
+    second: StagePropertyIcons_18
+  - first:
+      213: -7873825503792459017
+    second: StagePropertyIcons_19
+  - first:
+      213: -2928383146709551332
+    second: StagePropertyIcons_20
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 47
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: StagePropertyIcons_21
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 228
+        width: 44
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c77d7ac7774265f0800000000000000
+      internalID: -764970406875662394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagePropertyIcons_1
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 228
+        width: 44
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94f242fc7fbabfa70800000000000000
+      internalID: 8861865772602109769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagePropertyIcons_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 228
+        width: 44
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50168c1c879f93b60800000000000000
+      internalID: 7726480932773323013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagePropertyIcons_3
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 228
+        width: 44
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a10f357d1bc54b30800000000000000
+      internalID: 4271043149012337065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagePropertyIcons_4
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 228
+        width: 44
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eaedf2a4b417ee20800000000000000
+      internalID: 3379692811426065120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagePropertyIcons_5
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 228
+        width: 44
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79f61e4678d3ff090800000000000000
+      internalID: -7998606761464336489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagePropertyIcons_6
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 228
+        width: 44
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e28df7c7e83135f0800000000000000
+      internalID: -778778692414504222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagePropertyIcons_7
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 137
+        width: 44
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a1ebf93dbc78e9c0800000000000000
+      internalID: -3897728325325692503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagePropertyIcons_8
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 137
+        width: 44
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 293ea8f67df7209c0800000000000000
+      internalID: -3962464158866545774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagePropertyIcons_9
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 137
+        width: 44
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1935b45f9d0284560800000000000000
+      internalID: 7298119316649235345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagePropertyIcons_10
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 137
+        width: 44
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6720cfe61c1350420800000000000000
+      internalID: 2595535467109417590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagePropertyIcons_11
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 137
+        width: 44
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1b4100ae7fb6edf0800000000000000
+      internalID: -151222986899109093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagePropertyIcons_12
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 137
+        width: 44
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd4642dfcd16d0cb0800000000000000
+      internalID: -4896149618114140961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagePropertyIcons_13
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 137
+        width: 44
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 916c70c57a23c5860800000000000000
+      internalID: 7519941172186826265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagePropertyIcons_14
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 47
+        width: 44
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e86ee991202ae7bb0800000000000000
+      internalID: -4936330011648006514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagePropertyIcons_15
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 47
+        width: 44
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6fc8ef019d1934a0800000000000000
+      internalID: -6613222068942483603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagePropertyIcons_16
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 47
+        width: 44
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8152fd300cefe070800000000000000
+      internalID: 8137982537465221515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagePropertyIcons_17
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 47
+        width: 44
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67a2f62b059e73fe0800000000000000
+      internalID: -1209241442125403530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagePropertyIcons_18
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 47
+        width: 44
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d447c2cd4b3f90930800000000000000
+      internalID: 4110084093065851981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagePropertyIcons_19
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 47
+        width: 44
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f21a0feb6d8ab290800000000000000
+      internalID: -7873825503792459017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagePropertyIcons_20
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 47
+        width: 44
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c17f2261b0b4c57d0800000000000000
+      internalID: -2928383146709551332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
