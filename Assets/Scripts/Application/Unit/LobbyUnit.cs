@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class StageUnit : UnitBase {
+public class LobbyUnit : UnitBase {
     private void ReadyData() {
     }
     private void Start() {

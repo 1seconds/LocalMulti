@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 public enum SceneType {
     Intro,
     Lobby,
-    Stage
+    Stage,
+    
 }
 
 public interface SceneController {

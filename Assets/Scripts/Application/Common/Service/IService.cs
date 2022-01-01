@@ -5,6 +5,8 @@ public enum ServiceType {
     Setting,
     Rule,
     Lobby,
+    Unit,
+    Stage
 }
 
 public interface ServiceStatePresenter {

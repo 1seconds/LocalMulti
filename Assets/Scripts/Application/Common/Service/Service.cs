@@ -39,6 +39,9 @@ public class Service : SingletonGameObject<Service> {
     public static RuleService rule => RuleService.instance;
     public static LobbySceneService lobby => LobbySceneService.instance;
 
+    public static StageService stage => StageService.instance;
+    public static UnitService unit => UnitService.instance;
+
     // Callbacks
     //-------------------------------------------------------------------------
     private void Awake() {

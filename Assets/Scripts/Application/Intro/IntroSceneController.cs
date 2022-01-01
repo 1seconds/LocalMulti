@@ -64,6 +64,9 @@ public class IntroSceneController : SceneControllerBase, ServiceStatePresenter {
     private async Task<bool> Boot() {
         List<IService> services = new List<IService>();
         services.Add(Service.rule);
+        services.Add(Service.unit);
+        services.Add(Service.stage);
+        
         return await InitializeServices(services);
     }
     

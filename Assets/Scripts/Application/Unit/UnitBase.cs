@@ -15,10 +15,4 @@ public class UnitBase : MonoBehaviour {
 
     private void OnUpdateSelectedUnit(JobType type) {
     }
-    
-    private void ReadyData() {
-    }
-    private void Start() {
-        ReadyData();
-    }
 }
