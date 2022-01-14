@@ -1,0 +1,983 @@
+fileFormatVersion: 2
+guid: 4fe005b884ab0d746a0f0d8d9193723a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3608872623921508334
+    second: Unit1
+  - first:
+      213: 3022519489349979165
+    second: Unit19
+  - first:
+      213: -8280836880237989063
+    second: Unit16
+  - first:
+      213: 7142917883660777408
+    second: Unit5
+  - first:
+      213: -1646664117225292425
+    second: Unit3
+  - first:
+      213: -3164749455974022136
+    second: Unit20
+  - first:
+      213: -1693885631897828566
+    second: Unit24
+  - first:
+      213: 2256564114722191645
+    second: Unit9
+  - first:
+      213: -7634816125427880942
+    second: Unit4
+  - first:
+      213: -7372656351103052855
+    second: Unit23
+  - first:
+      213: 7762873827326995533
+    second: Unit27
+  - first:
+      213: 4728301767784083207
+    second: Unit28
+  - first:
+      213: 7674574198248283899
+    second: Unit32
+  - first:
+      213: -8772975476504389863
+    second: Unit13
+  - first:
+      213: 1561908528461144465
+    second: Unit7
+  - first:
+      213: 3371632748024965141
+    second: Unit31
+  - first:
+      213: 628948293192008987
+    second: 800da11481d67aa6abd7703b63eae5e5_16
+  - first:
+      213: 6706605128460687362
+    second: 800da11481d67aa6abd7703b63eae5e5_17
+  - first:
+      213: 5183200855130405887
+    second: 800da11481d67aa6abd7703b63eae5e5_18
+  - first:
+      213: 7420387301386014338
+    second: Unit17
+  - first:
+      213: -92459389223458240
+    second: Unit8
+  - first:
+      213: -4402487922114079213
+    second: 800da11481d67aa6abd7703b63eae5e5_21
+  - first:
+      213: 7378157618060264321
+    second: 800da11481d67aa6abd7703b63eae5e5_22
+  - first:
+      213: 8727095130771334459
+    second: 800da11481d67aa6abd7703b63eae5e5_23
+  - first:
+      213: -6264226478479850174
+    second: 800da11481d67aa6abd7703b63eae5e5_24
+  - first:
+      213: 8258519684681343593
+    second: Unit21
+  - first:
+      213: -6856560584053493516
+    second: Unit11
+  - first:
+      213: 9017952400340262623
+    second: 800da11481d67aa6abd7703b63eae5e5_27
+  - first:
+      213: -402729164472867584
+    second: 800da11481d67aa6abd7703b63eae5e5_28
+  - first:
+      213: 1597637671953976501
+    second: 800da11481d67aa6abd7703b63eae5e5_29
+  - first:
+      213: 3966639789449725445
+    second: 800da11481d67aa6abd7703b63eae5e5_30
+  - first:
+      213: -7427579620750522019
+    second: Unit25
+  - first:
+      213: 5134625777292592351
+    second: Unit12
+  - first:
+      213: 6509357575313427436
+    second: 800da11481d67aa6abd7703b63eae5e5_33
+  - first:
+      213: 6575673713310183472
+    second: 800da11481d67aa6abd7703b63eae5e5_34
+  - first:
+      213: -1292832595868533190
+    second: 800da11481d67aa6abd7703b63eae5e5_35
+  - first:
+      213: 1083467403032422019
+    second: 800da11481d67aa6abd7703b63eae5e5_36
+  - first:
+      213: 1808390945299634004
+    second: Unit29
+  - first:
+      213: 4474818885408761173
+    second: Unit15
+  - first:
+      213: -2688070373067997555
+    second: 800da11481d67aa6abd7703b63eae5e5_39
+  - first:
+      213: -5827126000249933020
+    second: 800da11481d67aa6abd7703b63eae5e5_40
+  - first:
+      213: -6380524880725000179
+    second: 800da11481d67aa6abd7703b63eae5e5_41
+  - first:
+      213: 4278686115565069583
+    second: 800da11481d67aa6abd7703b63eae5e5_42
+  - first:
+      213: 1588753029776322539
+    second: Unit30
+  - first:
+      213: -6130667227830155269
+    second: Unit2
+  - first:
+      213: 3213645762458750158
+    second: 800da11481d67aa6abd7703b63eae5e5_45
+  - first:
+      213: -2813264969575850753
+    second: 800da11481d67aa6abd7703b63eae5e5_46
+  - first:
+      213: -5928440854116546565
+    second: 800da11481d67aa6abd7703b63eae5e5_47
+  - first:
+      213: 4897080873572256083
+    second: 800da11481d67aa6abd7703b63eae5e5_48
+  - first:
+      213: -6608421846635118328
+    second: Unit26
+  - first:
+      213: -1903627517201622534
+    second: Unit6
+  - first:
+      213: 6495928255798013158
+    second: 800da11481d67aa6abd7703b63eae5e5_51
+  - first:
+      213: -5710376367240652176
+    second: 800da11481d67aa6abd7703b63eae5e5_52
+  - first:
+      213: 5287035073953072050
+    second: 800da11481d67aa6abd7703b63eae5e5_53
+  - first:
+      213: 3150786201681170566
+    second: 800da11481d67aa6abd7703b63eae5e5_54
+  - first:
+      213: 1696029328121591448
+    second: Unit22
+  - first:
+      213: 5052186858583228323
+    second: Unit10
+  - first:
+      213: 5899659253037818707
+    second: 800da11481d67aa6abd7703b63eae5e5_57
+  - first:
+      213: -7514339711215170102
+    second: 800da11481d67aa6abd7703b63eae5e5_58
+  - first:
+      213: 7806588238477338530
+    second: 800da11481d67aa6abd7703b63eae5e5_59
+  - first:
+      213: -703864468424569562
+    second: 800da11481d67aa6abd7703b63eae5e5_60
+  - first:
+      213: -3136129549428015356
+    second: Unit18
+  - first:
+      213: -1365280560736814794
+    second: Unit14
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 20
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Unit1
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 635
+        width: 92
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eef2974e78a451230800000000000000
+      internalID: 3608872623921508334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit5
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 553
+        width: 93
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c7b26b68fdb02360800000000000000
+      internalID: 7142917883660777408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit3
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 635
+        width: 92
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77d7764b5bfd529e0800000000000000
+      internalID: -1646664117225292425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit9
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 473
+        width: 93
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d19f8e64b1de05f10800000000000000
+      internalID: 2256564114722191645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit4
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 635
+        width: 90
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c62765f2fab0690800000000000000
+      internalID: -7634816125427880942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit13
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 392
+        width: 92
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9171ebb0941204680800000000000000
+      internalID: -8772975476504389863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit7
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 553
+        width: 92
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 191649208830da510800000000000000
+      internalID: 1561908528461144465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit17
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 311
+        width: 92
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28eceea8fe28af660800000000000000
+      internalID: 7420387301386014338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit8
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 553
+        width: 90
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04aaf25eca487bef0800000000000000
+      internalID: -92459389223458240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit21
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 230
+        width: 92
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 962a000d5e72c9270800000000000000
+      internalID: 8258519684681343593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit11
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 473
+        width: 92
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f0fb86f97a98d0a0800000000000000
+      internalID: -6856560584053493516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit25
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 150
+        width: 91
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d590c3c10bfebe890800000000000000
+      internalID: -7427579620750522019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit12
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 473
+        width: 91
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd4c616a0fad14740800000000000000
+      internalID: 5134625777292592351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit29
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 69
+        width: 91
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4571e95cbf1b81910800000000000000
+      internalID: 1808390945299634004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit15
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 392
+        width: 92
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 555aff25110c91e30800000000000000
+      internalID: 4474818885408761173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit30
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 69
+        width: 91
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: befa4a786726c0610800000000000000
+      internalID: 1588753029776322539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit2
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 635
+        width: 92
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf70e0153ae7beaa0800000000000000
+      internalID: -6130667227830155269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit26
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 150
+        width: 91
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8010269e75b2a44a0800000000000000
+      internalID: -6608421846635118328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit6
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 553
+        width: 92
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af9d984ebd4f495e0800000000000000
+      internalID: -1903627517201622534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit22
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 230
+        width: 91
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 896f45f10b1898710800000000000000
+      internalID: 1696029328121591448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit10
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 473
+        width: 92
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3afffb42e29fc1640800000000000000
+      internalID: 5052186858583228323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit18
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 311
+        width: 91
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40fbcbc6aca3a74d0800000000000000
+      internalID: -3136129549428015356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit14
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 392
+        width: 92
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6393986409c8d0de0800000000000000
+      internalID: -1365280560736814794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit19
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 311
+        width: 91
+        height: 76
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1c8669267522f920800000000000000
+      internalID: 3022519489349979165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit16
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 392
+        width: 91
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 933f57e2bbe841d80800000000000000
+      internalID: -8280836880237989063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit20
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 311
+        width: 91
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 804ce89232d8414d0800000000000000
+      internalID: -3164749455974022136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit24
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 230
+        width: 92
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a23879c0efb1e78e0800000000000000
+      internalID: -1693885631897828566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit23
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 230
+        width: 92
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c399755c101fa990800000000000000
+      internalID: -7372656351103052855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit27
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 150
+        width: 91
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4ca002dd944bbb60800000000000000
+      internalID: 7762873827326995533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit28
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 149
+        width: 92
+        height: 76
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70f2f9bf76d4e9140800000000000000
+      internalID: 4728301767784083207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit32
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 69
+        width: 91
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfe97f85290918a60800000000000000
+      internalID: 7674574198248283899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit31
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 69
+        width: 91
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5182a13ee127ace20800000000000000
+      internalID: 3371632748024965141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: -199, y: 375}
+      - {x: -199, y: -375}
+      - {x: 199, y: -375}
+      - {x: 199, y: 375}
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

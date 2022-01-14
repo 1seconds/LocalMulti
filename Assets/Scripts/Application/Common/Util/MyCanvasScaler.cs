@@ -39,10 +39,10 @@ public class MyCanvasScaler : MonoBehaviour {
         defaultUI.anchoredPosition = Vector3.zero;
         defaultUI.sizeDelta = size;
 
-        AdjustOffst(size, scaler);
+        AdjustOffset(size, scaler);
     }
 
-    private void AdjustOffst(Vector2 size, float scaler) {
+    private void AdjustOffset(Vector2 size, float scaler) {
 #if UNITY_IOS
         return;
 #endif
