@@ -1,21 +1,42 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
+public class EnemyStageUnit {
+    public int code;
+    public Transform transform;
+
+    public static EnemyStageUnit Build(int code, Transform transform) {
+        var res = new EnemyStageUnit();
+        res.code = code;
+        res.transform = transform;
+        return res;
+    }
+}
+
 public class StageUnit : UnitBase {
     [SerializeField] private PlayerUnitController playerUnitContoller;
     [SerializeField] private EnemyUnitController enemyUnitController;
+    
+    [SerializeField] private List<Transform> positionSet;
 
-    private Dictionary<int, Dictionary<int, int>> stageEnemyUnitSet;
+    private Dictionary<int, List<EnemyStageUnit>> stageEnemyUnitSet;
     
     private void ReadyData() {
-        stageEnemyUnitSet = new Dictionary<int, Dictionary<int, int>>();
+        stageEnemyUnitSet = new Dictionary<int, List<EnemyStageUnit>>();
         
-        stageEnemyUnitSet.Add(1, new Dictionary<int, int>() { { 1001, 1 }});
-        stageEnemyUnitSet.Add(2, new Dictionary<int, int>() { { 1001, 2 }});
-        stageEnemyUnitSet.Add(3, new Dictionary<int, int>() { { 1001, 3 }, { 1002, 1 }});
-        stageEnemyUnitSet.Add(4, new Dictionary<int, int>() { { 1001, 3 }, { 1002, 3 }});
-        stageEnemyUnitSet.Add(5, new Dictionary<int, int>() { { 1003, 1 }});
-        stageEnemyUnitSet.Add(6, new Dictionary<int, int>() { { 1003, 2 }});
+        stageEnemyUnitSet.Add(1, new List<EnemyStageUnit>() {
+            EnemyStageUnit.Build(1001, positionSet[0])
+        });
+        stageEnemyUnitSet.Add(2, new List<EnemyStageUnit>() {
+            EnemyStageUnit.Build(1001, positionSet[0]),
+            EnemyStageUnit.Build(1001, positionSet[1])
+        });
+        stageEnemyUnitSet.Add(3, new List<EnemyStageUnit>() {
+            EnemyStageUnit.Build(1001, positionSet[0]),
+            EnemyStageUnit.Build(1001, positionSet[1]),
+            EnemyStageUnit.Build(1001, positionSet[2]),
+            EnemyStageUnit.Build(1002, positionSet[3])
+        });
     }
     private void Start() {
         ReadyData();

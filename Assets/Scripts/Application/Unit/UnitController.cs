@@ -1,6 +1,6 @@
 ﻿public class UnitController : UnitBase {
     public int code;
-    public int uid;
+    private int uid { get; set; }
     private UnitType unitType { get; set; }
     private JobType jobType { get; set; }
     private int level { get; set; }

@@ -5,14 +5,12 @@ public class EnemyUnitController : UnitBase {
     [SerializeField] private Transform enemyUnitSet;
     [SerializeField] private Transform enemyPool;
     
-    private void ReadyData(Dictionary<int, int> enemySet) {
-        foreach (var selectedEnemy in enemySet) {
-            for (int i = 0; i < selectedEnemy.Value; i++) {
-                var code = selectedEnemy.Key;
-                var prefab = Instantiate(GetEnemyUnit(code));
-                prefab.GetComponent<UnitController>().Display();
-                prefab.transform.SetParent(enemyUnitSet);
-            }
+    private void ReadyData(List<EnemyStageUnit> enemySet) {
+        for (int i = 0; i < enemySet.Count; i++) {
+            var prefab = Instantiate(GetEnemyUnit(enemySet[i].code));
+            prefab.GetComponent<UnitController>().Display();
+            prefab.transform.SetParent(enemyUnitSet);
+            prefab.transform.localPosition = enemySet[i].transform.position;
         }
     }
     
@@ -26,7 +24,7 @@ public class EnemyUnitController : UnitBase {
         return null;
     }
     
-    public void Display(Dictionary<int, int> enemySet) {
+    public void Display(List<EnemyStageUnit> enemySet) {
         ReadyData(enemySet);
     }
 }
