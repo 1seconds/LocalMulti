@@ -74,7 +74,6 @@ public class Service : SingletonGameObject<Service> {
             }
             
             Debug.LogError(text);
-            scene.ShowAlert(text, AlertBoxType.Ok);
         }
     }
     

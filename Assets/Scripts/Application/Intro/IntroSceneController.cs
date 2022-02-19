@@ -12,10 +12,7 @@ public class IntroSceneController : SceneControllerBase, ServiceStatePresenter {
 
     public override SceneType sceneType => SceneType.Intro;
     public override GameObject defaultUI => mainAnchor;
-    public override GameObject alertLayer => alertAnchor;
-    public override GameObject waitingLayer => waitingAnchor;
-    public override GameObject pushLayer => pushAnchor;
-    
+
     private static bool logoDisplayed;
 
     public async void Start() {
@@ -74,13 +71,7 @@ public class IntroSceneController : SceneControllerBase, ServiceStatePresenter {
         foreach (IService service in services) {
             bool result = await service.Initialize(this);
             if (result == false) {
-                var res = new AlertBoxOutResult();
-                var key = "intro." + service.type + ".failed";
-                await Service.scene.ShowAlertKey(key, AlertBoxType.Retry, res);
-                if (res.value == AlertBoxResult.Ok) {
-                    SceneManager.LoadScene(0);
-                }
-
+                Debug.LogError("Init services fail");
                 return false;
             }
         }
