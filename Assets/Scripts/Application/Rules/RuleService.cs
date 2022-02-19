@@ -9,6 +9,9 @@ using UnityEngine;
 public class RuleService : Singleton<RuleService>, IService {
     public ServiceType type => ServiceType.Rule;
     public Dictionary<int, Unit> units { get; private set; }
+    public Dictionary<int, int> unitsLv { get; private set; }
+
+    public List<int> selectedPlayerUnits;
     public async Task<bool> Initialize(ServiceStatePresenter presenter) {
         LoadUnitRule();
         return true;
