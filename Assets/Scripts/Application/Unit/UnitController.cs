@@ -55,11 +55,19 @@ public class UnitController : UnitBase {
         ReadyData();
     }
 
+    //pick one way
     public void Update() {
-        if (Input.GetMouseButtonDown(0)) {
+        /*if (Input.GetMouseButtonDown(0)) {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit2D hit = Physics2D.GetRayIntersection(ray,Mathf.Infinity);
             if(hit.collider != null && hit.collider.transform == gameObject.transform) {
+                Debug.LogError(gameObject.name);
+            }
+        }*/
+        
+        if (Input.GetMouseButtonDown(0)){
+            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            if(GetComponent<Collider2D>().OverlapPoint(mousePosition)) {
                 Debug.LogError(gameObject.name);
             }
         }
