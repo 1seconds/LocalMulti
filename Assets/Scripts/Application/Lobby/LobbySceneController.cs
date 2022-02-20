@@ -14,4 +14,34 @@ public class LobbySceneController : SceneControllerBase {
             return;
         }
     }
+
+    public void OnClickSelectUnit() {
+        
+    }
+
+    public void OnClickBook() {
+        
+    }
+
+    public void OnClickMessage() {
+        
+    }
+
+    public void OnClickShop() {
+
+    }
+
+    public void OnClickStart() {
+        Service.scene.SwitchScene(SceneType.Stage);
+    }
+    
+    //forTest
+    public void OnClickInitStage() {
+        
+    }
+
+    //forTest
+    public void OnClickSelectStageStart() {
+        Service.scene.SwitchScene(SceneType.Stage);
+    }
 }
