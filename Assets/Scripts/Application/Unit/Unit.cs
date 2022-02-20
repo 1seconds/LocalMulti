@@ -15,6 +15,106 @@ public enum JobType {
     KNIGHT
 }
 
+public class UnitLvUpProperty {
+    public int code { get; set; }
+    public string lvUpType1 { get; set; }
+    public int lvUpValue1 { get; set; }
+    public string lvUpType2 { get; set; }
+    public int lvUpValue2 { get; set; }
+    public string lvUpType3 { get; set; }
+    public int lvUpValue3 { get; set; }
+    
+    public UnitLvUpProperty() {
+    }
+    
+    public UnitLvUpProperty(CsvRow row) {
+        From(row);
+    }
+    private void From(CsvRow row) {
+        code = row.NextInt();
+        lvUpType1 = row.NextString();
+        lvUpValue1 = row.NextInt();
+        lvUpType2 = row.NextString();
+        lvUpValue2 = row.NextInt();
+        lvUpType3 = row.NextString();
+        lvUpValue3 = row.NextInt();
+    }
+
+    public int GetLvUpAttack() {
+        if (lvUpType1 == "attack") {
+            return GetValue(1);
+        }
+        if (lvUpType2 == "attack") {
+            return GetValue(2);
+        }
+        if (lvUpType3 == "attack") {
+            return GetValue(3);
+        }
+        return 0;
+    }
+    public int GetLvUpDefense() {
+        if (lvUpType1 == "defense") {
+            return GetValue(1);
+        }
+        if (lvUpType2 == "defense") {
+            return GetValue(2);
+        }
+        if (lvUpType3 == "defense") {
+            return GetValue(3);
+        }
+        return 0;
+    }
+    public int GetLvUpHp() {
+        if (lvUpType1 == "hp") {
+            return GetValue(1);
+        }
+        if (lvUpType2 == "hp") {
+            return GetValue(2);
+        }
+        if (lvUpType3 == "hp") {
+            return GetValue(3);
+        }
+        return 0;
+    }
+    public int GetLvUpSpeed() {
+        if (lvUpType1 == "speed") {
+            return GetValue(1);
+        }
+        if (lvUpType2 == "speed") {
+            return GetValue(2);
+        }
+        if (lvUpType3 == "speed") {
+            return GetValue(3);
+        }
+        return 0;
+    }
+    public int GetLvUpRange() {
+        if (lvUpType1 == "range") {
+            return GetValue(1);
+        }
+        if (lvUpType2 == "range") {
+            return GetValue(2);
+        }
+        if (lvUpType3 == "range") {
+            return GetValue(3);
+        }
+        return 0;
+    }
+
+    private int GetValue(int index) {
+        if (index == 1) {
+            return lvUpValue1;
+        }
+        if (index == 2) {
+            return lvUpValue2;
+        }
+        if (index == 3) {
+            return lvUpValue3;
+        }
+        return -1;
+    }
+}
+
 public class UnitProperty {
     public int code { get; set; }
     public int attack { get; set; }
@@ -23,78 +123,20 @@ public class UnitProperty {
     public int speed { get; set; }
     public int range { get; set; }
 
-    public static UnitProperty Build(int code) {
-        var text = PersistenceUtil.LoadTextResource("Rules/unitProperty");
-        var parser = new CsvParser();
-        parser.Parse(text, "\t");
-
-        for (int index = 1; index < parser.Count; index++) {
-            var row = parser.GetRow(index);
-
-            var res = new UnitProperty();
-            //var rule = new Unit(row);//infinite loop occur
-            //if (rule.code == code) {
-                res.code = row.NextInt();
-                res.attack = row.NextInt();
-                res.defense = row.NextInt();
-                res.hp = row.NextInt();
-                res.speed = row.NextInt();
-                res.range = row.NextInt();
-
-                return res;
-            //}
-        }
-        return null;
-    }
-
     public UnitProperty() {
     }
     
     public UnitProperty(CsvRow row) {
-        LvUpPropertyFrom(row);
+        From(row);
     }
-
-    private void LvUpPropertyFrom(CsvRow row) {        //todo bug fix.
+    
+    private void From(CsvRow row) {
         code = row.NextInt();
-        if (row.NextString().Equals("attack")) {
-            attack += row.NextInt();
-        } else if (row.NextString().Equals("defense")) {
-            defense += row.NextInt();
-        } else if (row.NextString().Equals("hp")) {
-            hp += row.NextInt();
-        } else if (row.NextString().Equals("speed")) {
-            speed += row.NextInt();
-        } else if (row.NextString().Equals("range")) {
-            range += row.NextInt();
-        } else if (row.NextString().Equals("none")) {
-            return;
-        } 
-        
-        if (row.NextString().Equals("attack")) {
-            attack += row.NextInt();
-        } else if (row.NextString().Equals("defense")) {
-            defense += row.NextInt();
-        } else if (row.NextString().Equals("hp")) {
-            hp += row.NextInt();
-        } else if (row.NextString().Equals("speed")) {
-            speed += row.NextInt();
-        } else if (row.NextString().Equals("range")) {
-            range += row.NextInt();
-        } else if (row.NextString().Equals("none")) {
-            return;
-        } 
-        
-        if (row.NextString().Equals("attack")) {
-            attack += row.NextInt();
-        } else if (row.NextString().Equals("defense")) {
-            defense += row.NextInt();
-        } else if (row.NextString().Equals("hp")) {
-            hp += row.NextInt();
-        } else if (row.NextString().Equals("speed")) {
-            speed += row.NextInt();
-        } else if (row.NextString().Equals("range")) {
-            range += row.NextInt();
-        }
+        attack = row.NextInt();
+        defense = row.NextInt();
+        hp = row.NextInt();
+        speed = row.NextInt();
+        range = row.NextInt();
     }
 }
 
@@ -107,14 +149,14 @@ public class Unit {
 
 
     public Unit(CsvRow row) {
-        BaseFrom(row);
+        From(row);
     }
 
-    private void BaseFrom(CsvRow row) {
+    private void From(CsvRow row) {
         code = row.NextInt();
         unitType = row.NextEnum<UnitType>();
         jobType = row.NextEnum<JobType>();
-        property = UnitProperty.Build(code);    //todo bugfix.
+        property = Service.rule.unitsProperty[code];
 
         Service.setting.value.unitIndex += 1;
         uid = Service.setting.value.unitIndex;

@@ -21,14 +21,14 @@ public class UnitController : UnitBase {
         unitType = unitBaseRule.unitType;
         jobType = unitBaseRule.jobType;
         
-        attack = unitBaseRule.property.attack + unitLvUpPropertyRule.attack * level;
-        defense = unitBaseRule.property.defense + unitLvUpPropertyRule.defense * level;
-        hp = unitBaseRule.property.hp + unitLvUpPropertyRule.attack * hp;
-        speed = unitBaseRule.property.speed + unitLvUpPropertyRule.attack * speed;
-        range = unitBaseRule.property.range + unitLvUpPropertyRule.attack * range;
+        attack = unitBaseRule.property.attack + unitLvUpPropertyRule.GetLvUpAttack() * level;
+        defense = unitBaseRule.property.defense + unitLvUpPropertyRule.GetLvUpDefense() * level;
+        hp = unitBaseRule.property.hp + unitLvUpPropertyRule.GetLvUpHp() * level;
+        speed = unitBaseRule.property.speed + unitLvUpPropertyRule.GetLvUpSpeed() * level;
+        range = unitBaseRule.property.range + unitLvUpPropertyRule.GetLvUpRange() * level;
         
-        Debug.LogError("code : " + code + ", level : " + level + ", uid : " + uid + ", unitType : " + unitType + ", jobType : " + jobType +
-                       ", attack : " + attack + ", defense : " + defense + ", hp : " + hp + ", speed : " + speed + ", range : " + range);
+        //Debug.LogError("code : " + code + ", level : " + level + ", uid : " + uid + ", unitType : " + unitType + ", jobType : " + jobType +
+        //               ", attack : " + attack + ", defense : " + defense + ", hp : " + hp + ", speed : " + speed + ", range : " + range);
     }
 
     public void Display() {
