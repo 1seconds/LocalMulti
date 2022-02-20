@@ -24,9 +24,6 @@ public class UnitLvUpProperty {
     public string lvUpType3 { get; set; }
     public int lvUpValue3 { get; set; }
     
-    public UnitLvUpProperty() {
-    }
-    
     public UnitLvUpProperty(CsvRow row) {
         From(row);
     }
@@ -123,9 +120,6 @@ public class UnitProperty {
     public int speed { get; set; }
     public int range { get; set; }
 
-    public UnitProperty() {
-    }
-    
     public UnitProperty(CsvRow row) {
         From(row);
     }
@@ -142,6 +136,7 @@ public class UnitProperty {
 
 public class Unit {
     public int code { get; set; }
+    public int level { get; set; }
     public static int uid { get; set; }
     public UnitType unitType { get; set; }
     public JobType jobType { get; set; }

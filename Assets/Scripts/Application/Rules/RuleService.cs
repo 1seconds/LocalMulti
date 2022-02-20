@@ -13,13 +13,19 @@ public class RuleService : Singleton<RuleService>, IService {
 
     public Dictionary<int, UnitProperty> unitsProperty { get; private set; }
 
-    public List<int> selectedPlayerUnits;
+    public List<Unit> selectedPlayerUnits;
     
     
     public async Task<bool> Initialize(ServiceStatePresenter presenter) {
         LoadUnitLvPropertyRule();
         LoadUnitPropertyRule();
         LoadUnitRule();
+        
+        selectedPlayerUnits = new List<Unit>();
+        selectedPlayerUnits.Add(units[100]);
+        selectedPlayerUnits.Add(units[200]);
+        selectedPlayerUnits.Add(units[300]);
+        selectedPlayerUnits.Add(units[400]);
         return true;
     }
 

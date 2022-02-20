@@ -8,7 +8,7 @@ public class EnemyUnitController : UnitBase {
     private void ReadyData(List<EnemyStageUnit> enemySet) {
         for (int i = 0; i < enemySet.Count; i++) {
             var prefab = Instantiate(GetEnemyUnit(enemySet[i].code));
-            prefab.GetComponent<UnitController>().Display();
+            prefab.GetComponent<UnitController>().Display(enemySet[i]);
             prefab.transform.SetParent(enemyUnitSet);
             prefab.transform.localPosition = enemySet[i].transform.position;
         }
@@ -20,6 +20,7 @@ public class EnemyUnitController : UnitBase {
                 return enemyPool.GetChild(i).gameObject;
             }
         }
+        
         Debug.LogError("error : " + code);
         return null;
     }

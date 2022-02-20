@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using UnityEngine;
 
-public delegate void eventSelectedUnit(JobType type);
+public delegate void eventSelectedUnit(Unit unit);
 
 public class UnitService : Singleton<UnitService>, IService {
     public ServiceType type => ServiceType.Unit;
@@ -14,7 +14,7 @@ public class UnitService : Singleton<UnitService>, IService {
         return true;
     }
 
-    public void OnUpdateSelectedUnit(JobType type) {
-        selectedUnitUpdate?.Invoke(type);
+    public void OnUpdateSelectedUnit(Unit unit) {
+        selectedUnitUpdate?.Invoke(unit);
     }
 }

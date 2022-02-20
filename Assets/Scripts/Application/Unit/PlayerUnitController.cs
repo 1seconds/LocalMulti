@@ -4,11 +4,10 @@ public class PlayerUnitController : UnitBase {
     [SerializeField] private Transform playerPool;
 
     private void ReadyData() {
-        var selectedUnitCodes = Service.rule.selectedPlayerUnits;
-        for (int i = 0; i < selectedUnitCodes.Count; i++) {
-            var code = selectedUnitCodes[i];
-            var prefab = Instantiate(GetPlayerUnit(code));
-            prefab.GetComponent<UnitController>().Display();
+        var selectedUnits = Service.rule.selectedPlayerUnits;
+        for (int i = 0; i < selectedUnits.Count; i++) {
+            var prefab = Instantiate(GetPlayerUnit(selectedUnits[i].code));
+            prefab.GetComponent<UnitController>().Display(selectedUnits[i]);
             prefab.transform.SetParent(playerUnitSet);
         }
     }
