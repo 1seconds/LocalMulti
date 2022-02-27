@@ -19,26 +19,19 @@ public class IntroSceneController : SceneControllerBase, ServiceStatePresenter {
         InitController();        
         Service.Initialize();
         ReadyPhase();
-
-        // load settings
-        await Service.setting.Initialize(this);
-        await Service.sb.Initialize(this);
+        
         await Ready();
-
-        // show intro video
-        var settings = Service.setting.value;
+        
         if (!logoDisplayed) {
             await logo.Display();
             logoDisplayed = true;
         }
 
-        // Initialize basic services
         if (await Boot() == false) {
             SwitchScene(0).RunAsync();
             return;
         }
 
-        // update text bundle
         TextLocale.RefreshAll();
 
         Service.ready = true;
@@ -63,6 +56,7 @@ public class IntroSceneController : SceneControllerBase, ServiceStatePresenter {
         services.Add(Service.rule);
         services.Add(Service.unit);
         services.Add(Service.stage);
+        services.Add(Service.skill);
         
         return await InitializeServices(services);
     }

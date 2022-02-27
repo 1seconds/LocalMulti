@@ -41,6 +41,7 @@ public class Service : SingletonGameObject<Service> {
 
     public static StageService stage => StageService.instance;
     public static UnitService unit => UnitService.instance;
+    public static SkillService skill => SkillService.instance;
 
     // Callbacks
     //-------------------------------------------------------------------------
