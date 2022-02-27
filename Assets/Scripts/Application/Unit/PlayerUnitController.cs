@@ -6,7 +6,7 @@ public class PlayerUnitController : UnitBase {
     private void ReadyData() {
         var selectedUnits = Service.rule.selectedPlayerUnits;
         for (int i = 0; i < selectedUnits.Count; i++) {
-            var prefab = Instantiate(GetPlayerUnit(selectedUnits[i].code));
+            var prefab = Instantiate(GetPlayerUnit(selectedUnits[i].unitCode));
             prefab.GetComponent<UnitController>().Display(selectedUnits[i]);
             prefab.transform.SetParent(playerUnitSet);
         }

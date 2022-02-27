@@ -42,7 +42,7 @@ public class UnitController : UnitBase {
     public void Display(Unit unit) {
         gameObject.SetActive(true);
         originUnit = unit;
-        code = unit.code;
+        code = unit.unitCode;
         
         ReadyData();
     }
@@ -68,7 +68,7 @@ public class UnitController : UnitBase {
         if (Input.GetMouseButtonDown(0)){
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             if(GetComponent<Collider2D>().OverlapPoint(mousePosition)) {
-                Debug.LogError(gameObject.name);
+                Service.unit.OnUpdateSelectedUnit(originUnit);
             }
         }
     }

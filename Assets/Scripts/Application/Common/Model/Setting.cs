@@ -10,7 +10,7 @@ public class Setting {
     public bool effectSound = true;
     public SettingPref pref;
 
-    public int unitIndex = 0;
+    public int unitId = 0;
 
     public Setting() {
         language = StringBundleService.GetLanguageCode();

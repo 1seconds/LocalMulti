@@ -12,6 +12,12 @@ public class RuleService : Singleton<RuleService>, IService {
     public Dictionary<int, UnitLvUpProperty> unitsLvUpProperty { get; private set; }
 
     public Dictionary<int, UnitProperty> unitsProperty { get; private set; }
+    
+    public Dictionary<int, Unit> skills { get; private set; }
+    public Dictionary<int, UnitLvUpProperty> skillsLvUpProperty { get; private set; }
+
+    public Dictionary<int, UnitProperty> skillsProperty { get; private set; }
+    
 
     public List<Unit> selectedPlayerUnits;
     
@@ -43,7 +49,7 @@ public class RuleService : Singleton<RuleService>, IService {
         for (int index = 1; index < parser.Count; index++) {
             var row = parser.GetRow(index);
             var rule = new Unit(row);
-            units.Add(rule.code, rule);
+            units.Add(rule.unitCode, rule);
         }
     }
     

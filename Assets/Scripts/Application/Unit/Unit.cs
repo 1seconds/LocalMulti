@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public enum UnitType {
     PLAYER = 0,
@@ -37,76 +38,76 @@ public class UnitLvUpProperty {
         lvUpValue3 = row.NextInt();
     }
 
-    public int GetLvUpAttack() {
+    public int GetLvUpAttack(int level) {
         if (lvUpType1 == "attack") {
-            return GetValue(1);
+            return GetValue(1, level);
         }
         if (lvUpType2 == "attack") {
-            return GetValue(2);
+            return GetValue(2, level);
         }
         if (lvUpType3 == "attack") {
-            return GetValue(3);
+            return GetValue(3, level);
         }
         return 0;
     }
-    public int GetLvUpDefense() {
+    public int GetLvUpDefense(int level) {
         if (lvUpType1 == "defense") {
-            return GetValue(1);
+            return GetValue(1, level);
         }
         if (lvUpType2 == "defense") {
-            return GetValue(2);
+            return GetValue(2, level);
         }
         if (lvUpType3 == "defense") {
-            return GetValue(3);
+            return GetValue(3, level);
         }
         return 0;
     }
-    public int GetLvUpHp() {
+    public int GetLvUpHp(int level) {
         if (lvUpType1 == "hp") {
-            return GetValue(1);
+            return GetValue(1, level);
         }
         if (lvUpType2 == "hp") {
-            return GetValue(2);
+            return GetValue(2, level);
         }
         if (lvUpType3 == "hp") {
-            return GetValue(3);
+            return GetValue(3, level);
         }
         return 0;
     }
-    public int GetLvUpSpeed() {
+    public int GetLvUpSpeed(int level) {
         if (lvUpType1 == "speed") {
-            return GetValue(1);
+            return GetValue(1, level);
         }
         if (lvUpType2 == "speed") {
-            return GetValue(2);
+            return GetValue(2, level);
         }
         if (lvUpType3 == "speed") {
-            return GetValue(3);
+            return GetValue(3, level);
         }
         return 0;
     }
-    public int GetLvUpRange() {
+    public int GetLvUpRange(int level) {
         if (lvUpType1 == "range") {
-            return GetValue(1);
+            return GetValue(1, level);
         }
         if (lvUpType2 == "range") {
-            return GetValue(2);
+            return GetValue(2, level);
         }
         if (lvUpType3 == "range") {
-            return GetValue(3);
+            return GetValue(3, level);
         }
         return 0;
     }
 
-    private int GetValue(int index) {
+    private int GetValue(int index, int level) {
         if (index == 1) {
-            return lvUpValue1;
+            return lvUpValue1 * level;
         }
         if (index == 2) {
-            return lvUpValue2;
+            return lvUpValue2 * level;
         }
         if (index == 3) {
-            return lvUpValue3;
+            return lvUpValue3 * level;
         }
         return -1;
     }
@@ -135,26 +136,26 @@ public class UnitProperty {
 }
 
 public class Unit {
-    public int code { get; set; }
+    public int unitCode { get; set; }
     public int level { get; set; }
-    public static int uid { get; set; }
+    public static int unitId { get; set; }
     public UnitType unitType { get; set; }
     public JobType jobType { get; set; }
     public UnitProperty property { get; set; }
-
+    public List<Skill> skills { get; set; }
 
     public Unit(CsvRow row) {
         From(row);
     }
 
     private void From(CsvRow row) {
-        code = row.NextInt();
+        unitCode = row.NextInt();
         unitType = row.NextEnum<UnitType>();
         jobType = row.NextEnum<JobType>();
-        property = Service.rule.unitsProperty[code];
+        property = Service.rule.unitsProperty[unitCode];
 
-        Service.setting.value.unitIndex += 1;
-        uid = Service.setting.value.unitIndex;
+        Service.setting.value.unitId += 1;
+        unitId = Service.setting.value.unitId;
         Service.setting.Sync();
     }
 }
