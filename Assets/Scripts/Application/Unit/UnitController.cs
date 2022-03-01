@@ -18,7 +18,6 @@ public class UnitController : UnitBase {
     private float speed { get; set; }
     private float range { get; set; }
 
-    private Vector3 targetVector;
     private Coroutine moveRoutine;
 
     private void Start() {
@@ -61,26 +60,10 @@ public class UnitController : UnitBase {
 
     //pick one way
     public void Update() {
-        /*if (Input.GetMouseButtonDown(0)) {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.GetRayIntersection(ray,Mathf.Infinity);
-            if(hit.collider != null && hit.collider.transform == gameObject.transform) {
-                Debug.LogError(gameObject.name);
-            }
-        }*/
-        
         if (Input.GetMouseButtonDown(0)){
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             if (GetComponent<Collider2D>().OverlapPoint(mousePosition)) {
                 Service.unit.OnUpdateSelectedUnit(originUnit);
-            }
-        }
-        
-        if (Input.GetMouseButton(0)) {
-            if (UnitService.originUnit != null) {
-                if (UnitService.originUnit == originUnit) {
-                    OnDraging();
-                }
             }
         }
 
@@ -99,15 +82,14 @@ public class UnitController : UnitBase {
     }
 
     IEnumerator MoveRoutine() {
+        var targetVector = GetTargetVector(Camera.main.ScreenToWorldPoint(Input.mousePosition));
         while (true) {
             yield return new WaitForEndOfFrame();
             transform.position = Vector3.MoveTowards(transform.position, targetVector, Time.deltaTime * speed);
+            if (Vector3.Distance(transform.position, targetVector) < Vector3.kEpsilon) {
+                break;
+            }
         }
-    }
-    
-    private void OnDraging() {
-        var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        targetVector = new Vector3(mousePos.x, mousePos.y, 0);
     }
 
     public void OnDead() {
