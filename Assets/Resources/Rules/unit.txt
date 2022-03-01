@@ -1,4 +1,4 @@
-﻿code	unitType	jobType
+﻿unitCode	unitType	jobType
 100	PLAYER	WARRIOR
 200	PLAYER	HEALER
 300	PLAYER	TANKER

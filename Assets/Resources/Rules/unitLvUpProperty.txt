@@ -1,14 +1,14 @@
-﻿code	lvUpType1	lvUpValue1	lvUpType2	lvUpValue2	lvUpType3	lvUpValue3
-100	attack	5	hp	25	none	0
-200	hp	30	speed	3	none	0
-300	attack	2	defense	10	hp	30
-400	attack	5	hp	10	range	1
-500	attack	7	hp	10	none	0
-600	attack	4	hp	20	speed	2
+﻿unitCode	lvUpType1	lvUpValue1	lvUpType2	lvUpValue2	lvUpType3	lvUpValue3
+100	attack	5.0	hp	25.0	none	0
+200	hp	30.0	speed	3.0	none	0
+300	attack	2.0	defense	10.0	hp	30.0
+400	attack	5.0	hp	10.0	range	1.0
+500	attack	7.0	hp	10.0	none	0
+600	attack	4.0	hp	20.0	speed	2.0
 
-1000	attack	5	hp	25	none	0
-1100	hp	30	speed	3	none	0
-1200	attack	2	defense	10	hp	30
-1300	attack	5	hp	10	range	10
-1400	attack	7	hp	10	none	0
-1500	attack	4	hp	20	none	0
+1000	attack	5.0	hp	25.0	none	0
+1100	hp	30.0	speed	3.0	none	0
+1200	attack	2.0	defense	10.0	hp	30.0
+1300	attack	5.0	hp	10.0	range	10.0
+1400	attack	7.0	hp	10.0	none	0
+1500	attack	4.0	hp	20.0	none	0

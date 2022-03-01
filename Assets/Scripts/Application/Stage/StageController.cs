@@ -19,7 +19,9 @@ public class StageController : MonoBehaviour {
     }
 
     private void OnUpdateUnit(Unit unit) {
-        skillController.Display(unit);
+        if (unit.unitType == UnitType.PLAYER) {
+            skillController.Display(unit);
+        }
     }
     
     private void ReadyData() {

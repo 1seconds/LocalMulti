@@ -9,6 +9,9 @@ public class UnitService : Singleton<UnitService>, IService {
     public ServiceType type => ServiceType.Unit;
     
     public event eventSelectedUnit selectedUnitUpdate;
+
+    public static Unit originUnit;
+    public static Unit targetUnit;
     
     public async Task<bool> Initialize(ServiceStatePresenter presenter) {
         return true;
@@ -16,5 +19,6 @@ public class UnitService : Singleton<UnitService>, IService {
 
     public void OnUpdateSelectedUnit(Unit unit) {
         selectedUnitUpdate?.Invoke(unit);
+        originUnit = unit;
     }
 }

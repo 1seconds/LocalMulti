@@ -17,28 +17,28 @@ public enum JobType {
 }
 
 public class UnitLvUpProperty {
-    public int code { get; set; }
+    public int unitCode { get; set; }
     public string lvUpType1 { get; set; }
-    public int lvUpValue1 { get; set; }
+    public float lvUpValue1 { get; set; }
     public string lvUpType2 { get; set; }
-    public int lvUpValue2 { get; set; }
+    public float lvUpValue2 { get; set; }
     public string lvUpType3 { get; set; }
-    public int lvUpValue3 { get; set; }
+    public float lvUpValue3 { get; set; }
     
     public UnitLvUpProperty(CsvRow row) {
         From(row);
     }
     private void From(CsvRow row) {
-        code = row.NextInt();
+        unitCode = row.NextInt();
         lvUpType1 = row.NextString();
-        lvUpValue1 = row.NextInt();
+        lvUpValue1 = row.NextFloat();
         lvUpType2 = row.NextString();
-        lvUpValue2 = row.NextInt();
+        lvUpValue2 = row.NextFloat();
         lvUpType3 = row.NextString();
-        lvUpValue3 = row.NextInt();
+        lvUpValue3 = row.NextFloat();
     }
 
-    public int GetLvUpAttack(int level) {
+    public float GetLvUpAttack(int level) {
         if (lvUpType1 == "attack") {
             return GetValue(1, level);
         }
@@ -50,7 +50,7 @@ public class UnitLvUpProperty {
         }
         return 0;
     }
-    public int GetLvUpDefense(int level) {
+    public float GetLvUpDefense(int level) {
         if (lvUpType1 == "defense") {
             return GetValue(1, level);
         }
@@ -62,7 +62,7 @@ public class UnitLvUpProperty {
         }
         return 0;
     }
-    public int GetLvUpHp(int level) {
+    public float GetLvUpHp(int level) {
         if (lvUpType1 == "hp") {
             return GetValue(1, level);
         }
@@ -74,7 +74,7 @@ public class UnitLvUpProperty {
         }
         return 0;
     }
-    public int GetLvUpSpeed(int level) {
+    public float GetLvUpSpeed(int level) {
         if (lvUpType1 == "speed") {
             return GetValue(1, level);
         }
@@ -86,7 +86,7 @@ public class UnitLvUpProperty {
         }
         return 0;
     }
-    public int GetLvUpRange(int level) {
+    public float GetLvUpRange(int level) {
         if (lvUpType1 == "range") {
             return GetValue(1, level);
         }
@@ -99,7 +99,7 @@ public class UnitLvUpProperty {
         return 0;
     }
 
-    private int GetValue(int index, int level) {
+    private float GetValue(int index, int level) {
         if (index == 1) {
             return lvUpValue1 * level;
         }
@@ -114,24 +114,24 @@ public class UnitLvUpProperty {
 }
 
 public class UnitProperty {
-    public int code { get; set; }
-    public int attack { get; set; }
-    public int defense { get; set; }
-    public int hp { get; set; }
-    public int speed { get; set; }
-    public int range { get; set; }
+    public int unitCode { get; set; }
+    public float attack { get; set; }
+    public float defense { get; set; }
+    public float hp { get; set; }
+    public float speed { get; set; }
+    public float range { get; set; }
 
     public UnitProperty(CsvRow row) {
         From(row);
     }
     
     private void From(CsvRow row) {
-        code = row.NextInt();
-        attack = row.NextInt();
-        defense = row.NextInt();
-        hp = row.NextInt();
-        speed = row.NextInt();
-        range = row.NextInt();
+        unitCode = row.NextInt();
+        attack = row.NextFloat();
+        defense = row.NextFloat();
+        hp = row.NextFloat();
+        speed = row.NextFloat();
+        range = row.NextFloat();
     }
 }
 
@@ -152,8 +152,7 @@ public class Unit {
         unitCode = row.NextInt();
         unitType = row.NextEnum<UnitType>();
         jobType = row.NextEnum<JobType>();
-        property = Service.rule.unitsProperty[unitCode];
-
+        
         Service.setting.value.unitId += 1;
         unitId = Service.setting.value.unitId;
         Service.setting.Sync();

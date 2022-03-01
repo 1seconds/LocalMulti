@@ -9,15 +9,11 @@ using UnityEngine;
 public class RuleService : Singleton<RuleService>, IService {
     public ServiceType type => ServiceType.Rule;
     public Dictionary<int, Unit> units { get; private set; }
-    public Dictionary<int, UnitLvUpProperty> unitsLvUpProperty { get; private set; }
+    public Dictionary<int, UnitLvUpProperty> unitsLvUpProperties { get; private set; }
 
-    public Dictionary<int, UnitProperty> unitsProperty { get; private set; }
+    public Dictionary<int, UnitProperty> unitsProperties { get; private set; }
     
-    public Dictionary<int, Unit> skills { get; private set; }
-    public Dictionary<int, UnitLvUpProperty> skillsLvUpProperty { get; private set; }
-
-    public Dictionary<int, UnitProperty> skillsProperty { get; private set; }
-    
+    public Dictionary<int, Skill> skills { get; private set; }
 
     public List<Unit> selectedPlayerUnits;
     
@@ -26,6 +22,7 @@ public class RuleService : Singleton<RuleService>, IService {
         LoadUnitLvPropertyRule();
         LoadUnitPropertyRule();
         LoadUnitRule();
+        LoadSkillRule();
         
         selectedPlayerUnits = new List<Unit>();
         selectedPlayerUnits.Add(units[100]);
@@ -35,6 +32,22 @@ public class RuleService : Singleton<RuleService>, IService {
         return true;
     }
 
+    private void LoadSkillRule() {
+        var text = PersistenceUtil.LoadTextResource("Rules/skill");
+        if (string.IsNullOrEmpty(text)) {
+            return;
+        }
+
+        skills = new Dictionary<int, Skill>();
+        var parser = new CsvParser();
+        parser.Parse(text, "\t");
+
+        for (int index = 1; index < parser.Count; index++) {
+            var row = parser.GetRow(index);
+            var rule = new Skill(row);
+            skills.Add(rule.skillCode, rule);
+        }
+    }
     
     private void LoadUnitRule() {
         var text = PersistenceUtil.LoadTextResource("Rules/unit");
@@ -59,14 +72,14 @@ public class RuleService : Singleton<RuleService>, IService {
             return;
         }
 
-        unitsProperty = new Dictionary<int, UnitProperty>();
+        unitsProperties = new Dictionary<int, UnitProperty>();
         var parser = new CsvParser();
         parser.Parse(text, "\t");
 
         for (int index = 1; index < parser.Count; index++) {
             var row = parser.GetRow(index);
             var rule = new UnitProperty(row);
-            unitsProperty.Add(rule.code, rule);
+            unitsProperties.Add(rule.unitCode, rule);
         }
     }
     
@@ -76,14 +89,14 @@ public class RuleService : Singleton<RuleService>, IService {
             return;
         }
 
-        unitsLvUpProperty = new Dictionary<int, UnitLvUpProperty>();
+        unitsLvUpProperties = new Dictionary<int, UnitLvUpProperty>();
         var parser = new CsvParser();
         parser.Parse(text, "\t");
 
         for (int index = 1; index < parser.Count; index++) {
             var row = parser.GetRow(index);
             var rule = new UnitLvUpProperty(row);
-            unitsLvUpProperty.Add(rule.code, rule);
+            unitsLvUpProperties.Add(rule.unitCode, rule);
         }
     }
 }

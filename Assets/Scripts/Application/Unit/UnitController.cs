@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class UnitController : UnitBase {
@@ -11,11 +12,14 @@ public class UnitController : UnitBase {
     private UnitType unitType { get; set; }
     private JobType jobType { get; set; }
 
-    private int attack { get; set; }
-    private int defense { get; set; }
-    private int hp { get; set; }
-    private int speed { get; set; }
-    private int range { get; set; }
+    private float attack { get; set; }
+    private float defense { get; set; }
+    private float hp { get; set; }
+    private float speed { get; set; }
+    private float range { get; set; }
+
+    private Vector3 targetVector;
+    private Coroutine moveRoutine;
 
     private void Start() {
         ReadyData();
@@ -32,7 +36,7 @@ public class UnitController : UnitBase {
         //attack = unitBaseRule.property.attack + unitLvUpPropertyRule.GetLvUpAttack() * level;
         //defense = unitBaseRule.property.defense + unitLvUpPropertyRule.GetLvUpDefense() * level;
         //hp = unitBaseRule.property.hp + unitLvUpPropertyRule.GetLvUpHp() * level;
-        //speed = unitBaseRule.property.speed + unitLvUpPropertyRule.GetLvUpSpeed() * level;
+        speed = Service.rule.unitsProperties[code].speed; /*+ unitLvUpPropertyRule.GetLvUpSpeed() * level*/
         //range = unitBaseRule.property.range + unitLvUpPropertyRule.GetLvUpRange() * level;
         
         //Debug.LogError("code : " + code + ", level : " + level + ", uid : " + uid + ", unitType : " + unitType + ", jobType : " + jobType +
@@ -67,10 +71,43 @@ public class UnitController : UnitBase {
         
         if (Input.GetMouseButtonDown(0)){
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            if(GetComponent<Collider2D>().OverlapPoint(mousePosition)) {
+            if (GetComponent<Collider2D>().OverlapPoint(mousePosition)) {
                 Service.unit.OnUpdateSelectedUnit(originUnit);
             }
         }
+        
+        if (Input.GetMouseButton(0)) {
+            if (UnitService.originUnit != null) {
+                if (UnitService.originUnit == originUnit) {
+                    OnDraging();
+                }
+            }
+        }
+
+        if (Input.GetMouseButtonUp(0)) {
+            if (UnitService.originUnit != null) {
+                if (UnitService.originUnit == originUnit) {
+                    UnitService.originUnit = null;
+
+                    if (moveRoutine != null) {
+                        StopCoroutine(moveRoutine);
+                    }
+                    moveRoutine = StartCoroutine(MoveRoutine());
+                }
+            }
+        }
+    }
+
+    IEnumerator MoveRoutine() {
+        while (true) {
+            yield return new WaitForEndOfFrame();
+            transform.position = Vector3.MoveTowards(transform.position, targetVector, Time.deltaTime * speed);
+        }
+    }
+    
+    private void OnDraging() {
+        var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        targetVector = new Vector3(mousePos.x, mousePos.y, 0);
     }
 
     public void OnDead() {
