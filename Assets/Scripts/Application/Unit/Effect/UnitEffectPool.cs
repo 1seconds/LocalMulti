@@ -21,8 +21,6 @@ public class UnitEffectPool : MonoBehaviour {
     private void Display(Unit unit) {
         ReadyData();
     
-        Debug.LogError(unit);
-        
         for (int i = 0; i < unitEffects.Count; i++) {
             unitEffects[i].Display(unit);
         }
@@ -30,8 +28,6 @@ public class UnitEffectPool : MonoBehaviour {
     
     private void Display(Unit origin, Unit target) {
         ReadyData();
-        
-        Debug.LogError(origin + ", " + target);
         
         for (int i = 0; i < unitEffects.Count; i++) {
             unitEffects[i].Display(origin, target);

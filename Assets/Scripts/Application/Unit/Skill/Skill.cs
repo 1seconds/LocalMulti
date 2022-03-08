@@ -6,7 +6,7 @@
     public float castTime { get; set; }    //시전시간
     public float duration { get; set; }    //지속시간
     public float coolTime { get; set; }    //쿨타임
-    
+    public float remainCoolTime { get; set; }    //쿨타임 남은시간
     public string lvUpType1 { get; set; }
     public float lvUpValue1 { get; set; }
     public string lvUpType2 { get; set; }
@@ -14,6 +14,13 @@
 
     public Skill(CsvRow row) {
         From(row);
+    }
+
+    public void SetRemainCoolTime(float remainTime) {
+        remainCoolTime = remainTime;
+        if (remainCoolTime <= 0f) {
+            remainCoolTime = 0f;
+        }
     }
 
     private void From(CsvRow row) {
@@ -29,5 +36,7 @@
         lvUpValue1 = row.NextFloat();
         lvUpType2 = row.NextString();
         lvUpValue2 = row.NextFloat();
+
+        remainCoolTime = 0f;
     }
 }

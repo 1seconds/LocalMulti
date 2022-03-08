@@ -25,21 +25,8 @@ public class UnitController : UnitBase {
     }
 
     private void ReadyData() {
-        //var unitBaseRule = Service.rule.units[code];
-        //var unitLvUpPropertyRule = Service.rule.unitsLvUpProperty[code];
-
-        //uid = Unit.uid;
-        //unitType = unitBaseRule.unitType;
-        //jobType = unitBaseRule.jobType;
-        
-        //attack = unitBaseRule.property.attack + unitLvUpPropertyRule.GetLvUpAttack() * level;
-        //defense = unitBaseRule.property.defense + unitLvUpPropertyRule.GetLvUpDefense() * level;
-        //hp = unitBaseRule.property.hp + unitLvUpPropertyRule.GetLvUpHp() * level;
-        speed = Service.rule.unitsProperties[code].speed; /*+ unitLvUpPropertyRule.GetLvUpSpeed() * level*/
-        //range = unitBaseRule.property.range + unitLvUpPropertyRule.GetLvUpRange() * level;
-        
-        //Debug.LogError("code : " + code + ", level : " + level + ", uid : " + uid + ", unitType : " + unitType + ", jobType : " + jobType +
-        //               ", attack : " + attack + ", defense : " + defense + ", hp : " + hp + ", speed : " + speed + ", range : " + range);
+        targetUnit = null;
+        speed = Service.rule.unitsProperties[code].speed;
     }
 
     public void Display(Unit unit) {
@@ -65,10 +52,18 @@ public class UnitController : UnitBase {
     }
 
     public void Update() {
-        if (Input.GetMouseButtonDown(0) && UnitService.originUnit == null) {
+        if (Input.GetMouseButtonDown(0)) {
+            var isMouseOver = IsMouseOver(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+            if (isMouseOver) {
+                UnitService.originUnit = null;
+                return;
+            }
+            
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             if (GetComponent<Collider2D>().OverlapPoint(mousePosition)) {
                 Service.unit.OnUpdateSelectedUnit(originUnit);
+            } else if (originUnit == UnitService.originUnit) {
+                Service.unit.OnUpdateSelectedUnit(null);
             }
         }
 
@@ -76,20 +71,21 @@ public class UnitController : UnitBase {
             if (UnitService.originUnit == GetUnit()) {
                 Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 if (Physics2D.OverlapPoint(mousePosition) != null) {
-                    var targetUnit = Physics2D.OverlapPoint(mousePosition).GetComponent<UnitController>().GetUnit();
+                    targetUnit = Physics2D.OverlapPoint(mousePosition).GetComponent<UnitController>().GetUnit();
                     if (targetUnit != null && targetUnit != originUnit) {
                         Service.unit.OnUpdateSelectedUnits(originUnit, targetUnit);
                     }
+                } else {
+                    targetUnit = null;
                 }
 
                 if (UnitService.originUnit == originUnit) {
-                    UnitService.originUnit = null;
-                    UnitService.targetUnit = null;
-
-                    if (moveRoutine != null) {
-                        StopCoroutine(moveRoutine);
+                    if (targetUnit != originUnit) {
+                        if (moveRoutine != null) {
+                            StopCoroutine(moveRoutine);
+                        }
+                        moveRoutine = StartCoroutine(MoveRoutine());
                     }
-                    moveRoutine = StartCoroutine(MoveRoutine());
                 }
             }
         }

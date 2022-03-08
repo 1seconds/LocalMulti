@@ -19,13 +19,18 @@ public class StageController : MonoBehaviour {
     }
 
     private void OnUpdateUnit(Unit unit) {
+        skillController.gameObject.SetActive(unit != null);
+        if (unit == null) {
+            return;
+        }
+        
         if (unit.unitType == UnitType.PLAYER) {
             skillController.Display(unit);
         }
     }
     
     private void ReadyData() {
-        
+        skillController.gameObject.SetActive(false);
     }
     private void Start() {
         ReadyData();

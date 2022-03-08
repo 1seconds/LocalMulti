@@ -5,7 +5,7 @@ using UnityEngine;
 public class UnitBase : MonoBehaviour {
     private Vector2 minVector = new Vector2(-17, -5);
     private Vector2 maxVector = new Vector2(17, 9);
-    
+
     private void OnEnable() {
         Service.unit.selectedUnitUpdate += OnUpdateSelectedUnit;
     }
@@ -37,5 +37,26 @@ public class UnitBase : MonoBehaviour {
         }
 
         return targetVector;
+    } 
+    
+    protected bool IsMouseOver(Vector3 mousePos) {
+        var targetVector = new Vector3(mousePos.x, mousePos.y, 0);
+
+        if (targetVector.x < minVector.x) {
+            return true;
+        }
+
+        if (targetVector.y < minVector.y) {
+            return true;
+        }
+        
+        if (targetVector.x > maxVector.x) {
+            return true;
+        }
+
+        if (targetVector.y > maxVector.y) {
+            return true;
+        }
+        return false;
     } 
 }

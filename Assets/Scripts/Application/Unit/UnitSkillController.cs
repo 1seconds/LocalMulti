@@ -6,7 +6,8 @@ public class UnitSkillController : MonoBehaviour {
 
     [SerializeField] private List<Sprite> skillIcons;
     private Dictionary<int, Sprite> skills;
-
+    private Unit unit;
+    
     private void ReadyData() {
         skills = new Dictionary<int, Sprite>();
         skills.Add(100, skillIcons[0]);
@@ -38,11 +39,19 @@ public class UnitSkillController : MonoBehaviour {
         skills.Add(601, skillIcons[21]);
         skills.Add(602, skillIcons[22]);
         skills.Add(603, skillIcons[23]);
+
+        unit = null;
     }
     
     public void Display(Unit unit) {
         ReadyData();
+
+        if (this.unit != null &&
+            this.unit.unitCode == unit.unitCode) {
+            return;
+        }
         
+        this.unit = unit;
         for (int i = 0; i < skillItems.Count; i++) {
             skillItems[i].Display(Service.rule.skills[unit.unitCode + i], skills[unit.unitCode + i]);
         }

@@ -9,6 +9,7 @@ public class PlayerUnitController : UnitBase {
             var prefab = Instantiate(GetPlayerUnit(selectedUnits[i].unitCode));
             prefab.GetComponent<UnitController>().Display(selectedUnits[i]);
             prefab.transform.SetParent(playerUnitSet);
+            selectedUnits[i].SetUnitIndex(i);
         }
     }
 

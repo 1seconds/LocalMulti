@@ -143,9 +143,14 @@ public class Unit {
     public JobType jobType { get; set; }
     public UnitProperty property { get; set; }
     public List<Skill> skills { get; set; }
+    public int unitIndex;
 
     public Unit(CsvRow row) {
         From(row);
+    }
+
+    public void SetUnitIndex(int index) {
+        unitIndex = index;
     }
 
     private void From(CsvRow row) {
