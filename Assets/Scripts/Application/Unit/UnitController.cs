@@ -17,7 +17,7 @@ public class UnitController : UnitBase {
     private float hp { get; set; }
     private float speed { get; set; }
     private float range { get; set; }
-
+    
     private Coroutine moveRoutine;
 
     private void Start() {
@@ -50,6 +50,12 @@ public class UnitController : UnitBase {
         ReadyData();
     }
 
+    public Unit GetUnit() {
+        if (originUnit != null) {
+            return originUnit;
+        } return null;
+    }
+
     public void Display(EnemyStageUnit unit) {
         gameObject.SetActive(true);
         originUnit = Service.rule.units[unit.code];
@@ -58,9 +64,8 @@ public class UnitController : UnitBase {
         ReadyData();
     }
 
-    //pick one way
     public void Update() {
-        if (Input.GetMouseButtonDown(0)){
+        if (Input.GetMouseButtonDown(0) && UnitService.originUnit == null) {
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             if (GetComponent<Collider2D>().OverlapPoint(mousePosition)) {
                 Service.unit.OnUpdateSelectedUnit(originUnit);
@@ -68,9 +73,18 @@ public class UnitController : UnitBase {
         }
 
         if (Input.GetMouseButtonUp(0)) {
-            if (UnitService.originUnit != null) {
+            if (UnitService.originUnit == GetUnit()) {
+                Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                if (Physics2D.OverlapPoint(mousePosition) != null) {
+                    var targetUnit = Physics2D.OverlapPoint(mousePosition).GetComponent<UnitController>().GetUnit();
+                    if (targetUnit != null && targetUnit != originUnit) {
+                        Service.unit.OnUpdateSelectedUnits(originUnit, targetUnit);
+                    }
+                }
+
                 if (UnitService.originUnit == originUnit) {
                     UnitService.originUnit = null;
+                    UnitService.targetUnit = null;
 
                     if (moveRoutine != null) {
                         StopCoroutine(moveRoutine);
