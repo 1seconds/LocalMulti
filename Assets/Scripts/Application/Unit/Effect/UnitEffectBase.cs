@@ -11,4 +11,16 @@ public class UnitEffectBase : MonoBehaviour {
     public virtual void Display(Unit origin, Unit target) {
         
     }
+    
+    public virtual void Display(Unit unit, Skill skill) {
+        
+    }
+    
+    public virtual void Display(Unit origin, Unit target, Skill skill) {
+        
+    }
+
+    public virtual void Hide() {
+        
+    }
 }

@@ -1,8 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
-using UnityEngine;
 
 public delegate void eventSelectedUnit(Unit unit);
 public delegate void eventSelectedUnits(Unit originUnit, Unit targetUnit);

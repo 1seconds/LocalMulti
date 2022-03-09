@@ -1,27 +1,22 @@
 ﻿using UnityEngine;
 
 public class UnitEffect3 : UnitEffectBase {
-    private void ReadyData() {
+    
+    public override void Display(Unit unit, Skill skill) {
+        base.Display(unit, skill);
         
+        for (int i = 0; i < items.Count; i++) {
+            items[unit.unitIndex].HideUnitEffect3();
+        }
+        items[unit.unitIndex].DisplayUnitEffect3(unit, skill);
     }
     
-    public override void Display(Unit unit) {
-        base.Display(unit);
+    public override void Display(Unit origin, Unit target, Skill skill) {
+        base.Display(origin, target, skill);
         
-        ReadyData();
-
         for (int i = 0; i < items.Count; i++) {
-            items[i].Display(unit);
+            items[origin.unitIndex].HideUnitEffect3();
         }
-    }
-    
-    public override void Display(Unit origin, Unit target) {
-        base.Display(origin, target);
-        
-        ReadyData();
-
-        for (int i = 0; i < items.Count; i++) {
-            items[i].Display(origin, target);
-        }
+        items[origin.unitIndex].DisplayUnitEffect3(origin, target, skill);
     }
 }

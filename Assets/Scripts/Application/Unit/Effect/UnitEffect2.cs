@@ -1,17 +1,14 @@
 ﻿using UnityEngine;
 
 public class UnitEffect2 : UnitEffectBase {
-    private void ReadyData() {
-        
-    }
-    
-    public override void Display(Unit unit) {
-        base.Display(unit);
-        
-        ReadyData();
 
+    public override void Display(Unit origin, Unit target) {
+        base.Display(origin, target);
+        
         for (int i = 0; i < items.Count; i++) {
-            items[i].Display(unit);
+            items[origin.unitIndex].HideUnitEffect2();
         }
+        
+        items[origin.unitIndex].DisplayUnitEffect2(origin, target);
     }
 }

@@ -31,6 +31,11 @@ public class UnitSkillItem : MonoBehaviour {
         if (skill.remainCoolTime > 0f) {
             return;
         }
+        //
+        Service.skill.OnUpdateNoneTargetSkill(unit, skill);
+        for (int i = 0; i < skill.targets.Count; i++) {
+            Service.skill.OnUpdateTargetSkill(unit, skill.targets[i], skill);
+        }
         
         skill.SetRemainCoolTime(skill.coolTime);
         lockItem.Display(skill);

@@ -145,6 +145,10 @@ public class Unit {
     public List<Skill> skills { get; set; }
     public int unitIndex;
 
+    public void LevelUp() {
+        level += 1;
+    }
+    
     public Unit(CsvRow row) {
         From(row);
     }
@@ -157,6 +161,7 @@ public class Unit {
         unitCode = row.NextInt();
         unitType = row.NextEnum<UnitType>();
         jobType = row.NextEnum<JobType>();
+        level = 1;
         
         Service.setting.value.unitId += 1;
         unitId = Service.setting.value.unitId;

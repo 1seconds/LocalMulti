@@ -1,6 +1,8 @@
-﻿public class Skill {
+﻿using System.Collections.Generic;
+
+public class Skill {
     public int skillCode { get; set; }
-    
+    public List<Unit> targets;
     public float power1 { get; set; }      //파워1
     public float power2 { get; set; }      //파워2
     public float castTime { get; set; }    //시전시간
@@ -16,6 +18,11 @@
         From(row);
     }
 
+    public void SetSkillTargets(List<Unit> targets) {
+        this.targets = new List<Unit>();
+        this.targets = targets;
+    }
+    
     public void SetRemainCoolTime(float remainTime) {
         remainCoolTime = remainTime;
         if (remainCoolTime <= 0f) {
@@ -38,5 +45,6 @@
         lvUpValue2 = row.NextFloat();
 
         remainCoolTime = 0f;
+        targets = new List<Unit>();
     }
 }

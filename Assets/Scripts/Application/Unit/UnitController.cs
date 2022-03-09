@@ -7,7 +7,7 @@ public class UnitController : UnitBase {
     private Unit targetUnit;
 
     public int code;
-    //private int level;
+    [HideInInspector] public int level;
     private int uid { get; set; }
     private UnitType unitType { get; set; }
     private JobType jobType { get; set; }
@@ -19,6 +19,7 @@ public class UnitController : UnitBase {
     private float range { get; set; }
     
     private Coroutine moveRoutine;
+    private Coroutine interactionRoutine;
 
     private void Start() {
         ReadyData();
@@ -26,7 +27,10 @@ public class UnitController : UnitBase {
 
     private void ReadyData() {
         targetUnit = null;
-        speed = Service.rule.unitsProperties[code].speed;
+        level = Service.rule.units[code].level;
+        speed = Service.rule.unitsProperties[code].speed + Service.rule.unitsLvUpProperties[code].GetLvUpSpeed(level);
+        range = Service.rule.unitsProperties[code].range + Service.rule.unitsLvUpProperties[code].GetLvUpRange(level);
+        unitType = Service.rule.units[code].unitType;
     }
 
     public void Display(Unit unit) {
@@ -52,6 +56,10 @@ public class UnitController : UnitBase {
     }
 
     public void Update() {
+        if (unitType == UnitType.ENEMY) {
+            return;
+        }
+        
         if (Input.GetMouseButtonDown(0)) {
             var isMouseOver = IsMouseOver(Camera.main.ScreenToWorldPoint(Input.mousePosition));
             if (isMouseOver) {
@@ -81,16 +89,34 @@ public class UnitController : UnitBase {
 
                 if (UnitService.originUnit == originUnit) {
                     if (targetUnit != originUnit) {
-                        if (moveRoutine != null) {
-                            StopCoroutine(moveRoutine);
+                        if (targetUnit != null) {
+                            if (interactionRoutine != null) {
+                                StopCoroutine(interactionRoutine);
+                            }
+                            interactionRoutine = StartCoroutine(InteractionRoutine());
+                        } else {
+                            if (moveRoutine != null) {
+                                StopCoroutine(moveRoutine);
+                            }
+                            moveRoutine = StartCoroutine(MoveRoutine());
                         }
-                        moveRoutine = StartCoroutine(MoveRoutine());
                     }
                 }
             }
         }
     }
 
+    IEnumerator InteractionRoutine() {
+        var targetVector = GetTargetVector(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+        while (true) {
+            yield return new WaitForEndOfFrame();
+            transform.position = Vector3.MoveTowards(transform.position, targetVector, Time.deltaTime * speed);
+            if (Vector3.Distance(transform.position, targetVector) <= range) {
+                break;
+            }
+        }
+    }
+    
     IEnumerator MoveRoutine() {
         var targetVector = GetTargetVector(Camera.main.ScreenToWorldPoint(Input.mousePosition));
         while (true) {
