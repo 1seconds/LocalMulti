@@ -162,4 +162,8 @@ public class Unit {
         unitId = Service.setting.value.unitId;
         Service.setting.Sync();
     }
+
+    public void SetSkill(List<Skill> skills) {
+        this.skills = skills;
+    }
 }

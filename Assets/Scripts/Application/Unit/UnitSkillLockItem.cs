@@ -17,15 +17,13 @@ public class UnitSkillLockItem : MonoBehaviour {
             cg = GetComponent<CanvasGroup>();
         }
         cg.alpha = 1f;
-        remainTimeText.text = remainCoolTime.ToString("F1");
     }
     
     public void Display(Skill skill) {
         ReadyData();
         
         this.skill = skill;
-        remainCoolTime = skill.remainCoolTime;
-
+        
         if (timeRoutine != null) {
             StopCoroutine(timeRoutine);
         }
@@ -41,20 +39,14 @@ public class UnitSkillLockItem : MonoBehaviour {
     }
 
     IEnumerator TimeRoutine() {
-        var passTime = 0f;
-        
         while (true) {
+            remainTimeText.text = (remainCoolTime).ToString("F1");
             yield return new WaitForSeconds(0.01f);
-            
-            remainTimeText.text = (remainCoolTime - passTime).ToString("F1");
-            skill.SetRemainCoolTime(remainCoolTime - passTime);
-            
-            passTime += 0.01f;
-            if (remainCoolTime - passTime <= 0) {
+            remainCoolTime = skill.remainCoolTime;
+            if (remainCoolTime <= 0) {
                 break;
             }
         }
-        
         cg.alpha = 0f;
     }
 }

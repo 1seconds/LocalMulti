@@ -52,8 +52,14 @@ public class UnitSkillController : MonoBehaviour {
         }
         
         this.unit = unit;
+        
+        List<Skill> unitSkillItems = new List<Skill>();
         for (int i = 0; i < skillItems.Count; i++) {
-            skillItems[i].Display(Service.rule.skills[unit.unitCode + i], skills[unit.unitCode + i]);
+            unitSkillItems.Add(Service.rule.skills[unit.unitCode + i]);
+        }
+        unit.SetSkill(unitSkillItems);
+        for (int i = 0; i < skillItems.Count; i++) {
+            skillItems[i].Display(unit, Service.rule.skills[unit.unitCode + i], skills[unit.unitCode + i]);
         }
     }
 }
