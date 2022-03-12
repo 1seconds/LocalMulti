@@ -26,16 +26,19 @@ public class UnitEffectPool : MonoBehaviour {
             unitEffects[0].OnEffect(unit);
         } else {
             unitEffects[0].OffEffect();
+            unitEffects[1].OffEffect();
         }
     }
     
     private void ShowInteractionEffect(Unit origin, Unit target) {
+        unitEffects[2].OffEffect();
         if (origin != null && target != null) {
             unitEffects[1].OnEffect(origin, target);
         }
     }
     
     private void ShowMoveEffect(Unit origin, Vector2 targetPoint) {
+        unitEffects[1].OffEffect();
         if (origin != null && targetPoint != null) {
             unitEffects[2].OnEffect(origin, targetPoint);
         }

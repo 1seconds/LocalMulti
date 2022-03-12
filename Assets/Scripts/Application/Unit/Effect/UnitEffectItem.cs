@@ -2,12 +2,11 @@
 using UnityEngine;
 
 public class UnitEffectItem : MonoBehaviour {
-    [SerializeField] private SpriteRenderer sr;
-
     private Coroutine selectEffectRoutine;
+    private Coroutine interactionEffectRoutine;
+    private Coroutine moveEffectRoutine;
 
     public void OnSelectEffect(Unit unit) {
-        Debug.LogError("Select " + unit.unitCode);
         var unitTransForm = Service.unit.selectedUnits[unit].transform;
         transform.position = unitTransForm.position + Vector3.up * 1.1f;
         
@@ -15,10 +14,10 @@ public class UnitEffectItem : MonoBehaviour {
         if (selectEffectRoutine != null) {
             StopCoroutine(selectEffectRoutine);
         }
-        selectEffectRoutine = StartCoroutine(Effect1Routine(unit));
+        selectEffectRoutine = StartCoroutine(SelectRoutine(unit));
     }
 
-    IEnumerator Effect1Routine(Unit unit) {
+    IEnumerator SelectRoutine(Unit unit) {
         var pingpongTime = 0f;
         
         while (true) {
@@ -30,13 +29,46 @@ public class UnitEffectItem : MonoBehaviour {
     }
 
     public void OnInteractionEffect(Unit origin, Unit target) {
-        Debug.LogError("Interaction " + origin.unitCode + ", " + target.unitCode);
+        var unitTransForm = Service.unit.selectedUnits[target].transform;
+        transform.position = unitTransForm.position + Vector3.up * 1.1f;
+        
         gameObject.SetActive(true);
+        if (interactionEffectRoutine != null) {
+            StopCoroutine(interactionEffectRoutine);
+        }
+        interactionEffectRoutine = StartCoroutine(InteractionRoutine(target));
+    }
+    
+    IEnumerator InteractionRoutine(Unit unit) {
+        var pingpongTime = 0f;
+        
+        while (true) {
+            yield return new WaitForEndOfFrame();
+            pingpongTime += Time.deltaTime;
+            var unitTransForm = Service.unit.selectedUnits[unit].transform;
+            transform.position = Vector2.Lerp(unitTransForm.position + Vector3.up * 1.1f, unitTransForm.position + Vector3.up * 1.3f, Mathf.PingPong(pingpongTime, 1));
+        }
     }
     
     public void OnMoveEffect(Unit origin, Vector2 targetPoint) {
-        Debug.LogError("Move " + origin.unitCode + ", " + targetPoint);
+        transform.position = targetPoint;
+        
         gameObject.SetActive(true);
+        if (moveEffectRoutine != null) {
+            StopCoroutine(moveEffectRoutine);
+        }
+        moveEffectRoutine = StartCoroutine(MoveRoutine(targetPoint));
+    }
+    
+    IEnumerator MoveRoutine(Vector2 targetPoint) {
+        var pingpongTime = 0f;
+        
+        while (true) {
+            yield return new WaitForEndOfFrame();
+            pingpongTime += Time.deltaTime;
+            transform.position = targetPoint;
+            transform.localScale = Vector2.Lerp(Vector2.one * 2f, Vector2.one * 3f, Mathf.PingPong(pingpongTime, 0.5f));
+        }
     }
 
     public void OnNoneTargetSkillEffect(Unit origin, Skill skill) {

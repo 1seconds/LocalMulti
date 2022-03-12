@@ -4,6 +4,7 @@ using UnityEngine;
 public class EnemyStageUnit {
     public int code;
     public int level;
+    public int unitId;
     public Transform transform;
 
     public static EnemyStageUnit Build(int code, int level, Transform transform) {

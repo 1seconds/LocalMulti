@@ -8,7 +8,7 @@ public class UnitController : UnitBase {
 
     public int code;
     [HideInInspector] public int level;
-    private int uid { get; set; }
+    public int uid;
     private UnitType unitType { get; set; }
     private JobType jobType { get; set; }
 
@@ -21,10 +21,6 @@ public class UnitController : UnitBase {
     private Coroutine moveRoutine;
     private Coroutine interactionRoutine;
 
-    private void Start() {
-        ReadyData();
-    }
-
     private void ReadyData() {
         targetUnit = null;
         level = Service.rule.units[code].level;
@@ -34,6 +30,8 @@ public class UnitController : UnitBase {
 
         if (!Service.unit.selectedUnits.ContainsKey(originUnit)) {
             Service.unit.selectedUnits.Add(originUnit, this);
+        } else {
+            Debug.LogError("key 중복:" + originUnit.unitId);
         }
     }
 
@@ -41,7 +39,9 @@ public class UnitController : UnitBase {
         gameObject.SetActive(true);
         originUnit = unit;
         code = unit.unitCode;
-        
+        unit.SetUnitId();
+        uid = originUnit.unitId;
+        Debug.LogError("player : " + unit.unitId);
         ReadyData();
     }
 
@@ -50,12 +50,18 @@ public class UnitController : UnitBase {
             return originUnit;
         } return null;
     }
-
+    
     public void Display(EnemyStageUnit unit) {
+        //todo 유닛 생성후 레퍼런스로 유닛 건내줄것. EnemyStageUnit -> Unit
+        // 적 유닛의 unitId가 중복됨
+        // 공격시 한 유닛에게만 공격마크생김
+        //todo 적유닛일때, 아군일때 공격마크, 도움마크 구분
         gameObject.SetActive(true);
         originUnit = Service.rule.units[unit.code];
-        code = unit.code;
-        
+        originUnit.unitId = originUnit.SetUnitId();
+        code = originUnit.unitCode;
+        uid = originUnit.unitId;
+        Debug.LogError("enemy : " + originUnit.unitId);
         ReadyData();
     }
 
@@ -68,6 +74,7 @@ public class UnitController : UnitBase {
             var isMouseOver = IsMouseOver(Camera.main.ScreenToWorldPoint(Input.mousePosition));
             if (isMouseOver) {
                 UnitService.originUnit = null;
+                Service.unit.OnUpdateSelectedUnit(null);
                 return;
             }
             
@@ -86,7 +93,7 @@ public class UnitController : UnitBase {
                     targetUnit = Physics2D.OverlapPoint(mousePosition).GetComponent<UnitController>().GetUnit();
                     if (targetUnit != null && targetUnit != originUnit) {
                         Service.unit.OnUpdateSelectedUnits(originUnit, targetUnit);
-                    } //todo
+                    }
                 } else {
                     targetUnit = null;
                 }

@@ -16,4 +16,9 @@ public class Setting {
         language = StringBundleService.GetLanguageCode();
         pref = new SettingPref();
     }
+
+    public int GetUnitId() {
+        unitId += 1;
+        return unitId;
+    }
 }

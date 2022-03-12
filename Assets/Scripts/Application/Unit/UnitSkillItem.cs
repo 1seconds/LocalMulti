@@ -7,11 +7,6 @@ public class UnitSkillItem : MonoBehaviour {
     
     private Skill skill;
     private Unit unit;
-    
-    public Coroutine unit1SkillRoutine;
-    public Coroutine unit2SkillRoutine;
-    public Coroutine unit3SkillRoutine;
-    public Coroutine unit4SkillRoutine;
 
     public void Display(Unit unit, Skill skill, Sprite icon) {
         this.icon.sprite = icon;
@@ -31,7 +26,7 @@ public class UnitSkillItem : MonoBehaviour {
         if (skill.remainCoolTime > 0f) {
             return;
         }
-        //
+
         Service.skill.OnUpdateNoneTargetSkill(unit, skill);
         for (int i = 0; i < skill.targets.Count; i++) {
             Service.skill.OnUpdateTargetSkill(unit, skill.targets[i], skill);

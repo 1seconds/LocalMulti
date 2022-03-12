@@ -138,13 +138,13 @@ public class UnitProperty {
 public class Unit {
     public int unitCode { get; set; }
     public int level { get; set; }
-    public static int unitId { get; set; }
+    public int unitId { get; set; }
     public UnitType unitType { get; set; }
     public JobType jobType { get; set; }
     public UnitProperty property { get; set; }
     public List<Skill> skills { get; set; }
     public int unitIndex;
-
+    
     public void LevelUp() {
         level += 1;
     }
@@ -162,13 +162,15 @@ public class Unit {
         unitType = row.NextEnum<UnitType>();
         jobType = row.NextEnum<JobType>();
         level = 1;
-        
-        Service.setting.value.unitId += 1;
-        unitId = Service.setting.value.unitId;
-        Service.setting.Sync();
     }
 
     public void SetSkill(List<Skill> skills) {
         this.skills = skills;
+    }
+
+    public int SetUnitId() {
+        unitId = Service.setting.value.GetUnitId();
+        Service.setting.Sync();
+        return unitId;
     }
 }
