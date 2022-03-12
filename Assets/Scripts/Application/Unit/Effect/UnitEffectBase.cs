@@ -4,23 +4,30 @@ using UnityEngine;
 public class UnitEffectBase : MonoBehaviour {
     [SerializeField] protected List<UnitEffectItem> items;
 
-    public virtual void Display(Unit unit) {
-        
+    public void OnEffect(Unit unit) {
+        OffEffect();
+        items[unit.unitIndex].OnSelectEffect(unit);
     }
     
-    public virtual void Display(Unit origin, Unit target) {
-        
+    public void OnEffect(Unit origin, Unit target) {
+        items[origin.unitIndex].OnInteractionEffect(origin, target);
     }
     
-    public virtual void Display(Unit unit, Skill skill) {
-        
+    public void OnEffect(Unit origin, Vector2 targetPoint) {
+        items[origin.unitIndex].OnMoveEffect(origin, targetPoint);
     }
     
-    public virtual void Display(Unit origin, Unit target, Skill skill) {
-        
+    public void OnEffect(Unit unit, Skill skill) {
+        items[unit.unitIndex].OnNoneTargetSkillEffect(unit, skill);
+    }
+    
+    public void OnEffect(Unit origin, Unit target, Skill skill) {
+        items[origin.unitIndex].OnTargetSkillEffect(origin, target, skill);
     }
 
-    public virtual void Hide() {
-        
+    public void OffEffect() {
+        for (int i = 0; i < items.Count; i++) {
+            items[i].OffEffect();
+        }
     }
 }

@@ -5,40 +5,51 @@ public class UnitEffectPool : MonoBehaviour {
     [SerializeField] private List<UnitEffectBase> unitEffects;
 
     private void OnEnable() {
-        Service.unit.selectedUnitUpdate += Display;
-        Service.unit.selectedUnitsUpdate += Display;
-        Service.skill.skillNoneTargetUpdate += Display;
-        Service.skill.skillTargetUpdate += Display;
+        Service.unit.selectedUnitUpdate += ShowSelectEffect;
+        Service.unit.selectedUnitsUpdate += ShowInteractionEffect;
+        Service.unit.selectedUnitMovePointUpdate += ShowMoveEffect;
+        Service.skill.skillNoneTargetUpdate += ShowNoneTargetSkillEffect;
+        Service.skill.skillTargetUpdate += ShowTargetSkillEffect;
+        
     }
 
     private void OnDisable() {
-        Service.unit.selectedUnitUpdate -= Display;
-        Service.unit.selectedUnitsUpdate -= Display;
-        Service.skill.skillNoneTargetUpdate -= Display;
-        Service.skill.skillTargetUpdate -= Display;
+        Service.unit.selectedUnitUpdate -= ShowSelectEffect;
+        Service.unit.selectedUnitsUpdate -= ShowInteractionEffect;
+        Service.unit.selectedUnitMovePointUpdate -= ShowMoveEffect;
+        Service.skill.skillNoneTargetUpdate -= ShowNoneTargetSkillEffect;
+        Service.skill.skillTargetUpdate -= ShowTargetSkillEffect;
     }
 
-    private void Display(Unit unit) {
+    private void ShowSelectEffect(Unit unit) {
         if (unit != null) {
-            unitEffects[0].Display(unit);
+            unitEffects[0].OnEffect(unit);
+        } else {
+            unitEffects[0].OffEffect();
         }
     }
     
-    private void Display(Unit origin, Unit target) {
+    private void ShowInteractionEffect(Unit origin, Unit target) {
         if (origin != null && target != null) {
-            unitEffects[1].Display(origin, target);
+            unitEffects[1].OnEffect(origin, target);
         }
     }
     
-    private void Display(Unit unit, Skill skill) {
+    private void ShowMoveEffect(Unit origin, Vector2 targetPoint) {
+        if (origin != null && targetPoint != null) {
+            unitEffects[2].OnEffect(origin, targetPoint);
+        }
+    }
+    
+    private void ShowNoneTargetSkillEffect(Unit unit, Skill skill) {
         if (unit != null && skill != null) {
-            unitEffects[2].Display(unit, skill);
+            unitEffects[3].OnEffect(unit, skill);
         }
     }
     
-    private void Display(Unit origin, Unit target, Skill skill) {
+    private void ShowTargetSkillEffect(Unit origin, Unit target, Skill skill) {
         if (origin != null && target != null && skill != null) {
-            unitEffects[2].Display(origin, target, skill);
+            unitEffects[4].OnEffect(origin, target, skill);
         }
     }
 }

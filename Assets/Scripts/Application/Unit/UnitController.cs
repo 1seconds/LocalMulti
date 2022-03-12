@@ -31,6 +31,10 @@ public class UnitController : UnitBase {
         speed = Service.rule.unitsProperties[code].speed + Service.rule.unitsLvUpProperties[code].GetLvUpSpeed(level);
         range = Service.rule.unitsProperties[code].range + Service.rule.unitsLvUpProperties[code].GetLvUpRange(level);
         unitType = Service.rule.units[code].unitType;
+
+        if (!Service.unit.selectedUnits.ContainsKey(originUnit)) {
+            Service.unit.selectedUnits.Add(originUnit, this);
+        }
     }
 
     public void Display(Unit unit) {
@@ -82,7 +86,7 @@ public class UnitController : UnitBase {
                     targetUnit = Physics2D.OverlapPoint(mousePosition).GetComponent<UnitController>().GetUnit();
                     if (targetUnit != null && targetUnit != originUnit) {
                         Service.unit.OnUpdateSelectedUnits(originUnit, targetUnit);
-                    }
+                    } //todo
                 } else {
                     targetUnit = null;
                 }
@@ -119,6 +123,7 @@ public class UnitController : UnitBase {
     
     IEnumerator MoveRoutine() {
         var targetVector = GetTargetVector(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+        Service.unit.OnUpdateSelectedUnitMovePoint(originUnit, targetVector);
         while (true) {
             yield return new WaitForEndOfFrame();
             transform.position = Vector3.MoveTowards(transform.position, targetVector, Time.deltaTime * speed);
