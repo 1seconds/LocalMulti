@@ -153,8 +153,26 @@ public class Unit {
         From(row);
     }
 
+    public Unit(Unit unit) {
+        unitCode = unit.unitCode;
+        level = unit.level;
+        unitId = Service.setting.value.GetUnitId();
+        unitType = unit.unitType;
+        jobType = unit.jobType;
+        property = unit.property;
+        skills = unit.skills;
+        unitIndex = unit.unitIndex;
+        
+        Service.setting.Sync();
+    }
+
     public void SetUnitIndex(int index) {
         unitIndex = index;
+    }
+    
+    public void SetUnitId() {
+        unitId = Service.setting.value.GetUnitId();
+        Service.setting.Sync();
     }
 
     private void From(CsvRow row) {
@@ -166,11 +184,5 @@ public class Unit {
 
     public void SetSkill(List<Skill> skills) {
         this.skills = skills;
-    }
-
-    public int SetUnitId() {
-        unitId = Service.setting.value.GetUnitId();
-        Service.setting.Sync();
-        return unitId;
     }
 }

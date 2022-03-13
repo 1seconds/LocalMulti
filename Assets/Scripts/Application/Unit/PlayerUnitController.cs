@@ -7,9 +7,12 @@ public class PlayerUnitController : UnitBase {
         var selectedUnits = Service.rule.selectedPlayerUnits;
         for (int i = 0; i < selectedUnits.Count; i++) {
             var prefab = Instantiate(GetPlayerUnit(selectedUnits[i].unitCode));
+            
+            selectedUnits[i].SetUnitIndex(i);
+            selectedUnits[i].SetUnitId();
+            
             prefab.GetComponent<UnitController>().Display(selectedUnits[i]);
             prefab.transform.SetParent(playerUnitSet);
-            selectedUnits[i].SetUnitIndex(i);
         }
     }
 
