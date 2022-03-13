@@ -6,6 +6,7 @@ using UnityEngine;
 public delegate void eventSelectedUnit(Unit unit);
 public delegate void eventSelectedUnits(Unit originUnit, Unit targetUnit);
 public delegate void eventSelectedUnitMovePoint(Unit originUnit, Vector2 point);
+public delegate void eventSetUnit();
 
 public class UnitService : Singleton<UnitService>, IService {
     public ServiceType type => ServiceType.Unit;
@@ -13,6 +14,7 @@ public class UnitService : Singleton<UnitService>, IService {
     public event eventSelectedUnit selectedUnitUpdate;
     public event eventSelectedUnits selectedUnitsUpdate;
     public event eventSelectedUnitMovePoint selectedUnitMovePointUpdate;
+    public event eventSetUnit setUnitUpdate;
 
     public static Unit originUnit;
     public static Unit targetUnit;
@@ -22,6 +24,7 @@ public class UnitService : Singleton<UnitService>, IService {
         selectedUnitUpdate = null;
         selectedUnitsUpdate = null;
         selectedUnitMovePointUpdate = null;
+        setUnitUpdate = null;
         return true;
     }
 
@@ -39,5 +42,9 @@ public class UnitService : Singleton<UnitService>, IService {
     public void OnUpdateSelectedUnitMovePoint(Unit origin, Vector2 point) {
         selectedUnitMovePointUpdate?.Invoke(origin, point);
         originUnit = origin;
+    }
+
+    public void OnUpdateSetUnit() {
+        setUnitUpdate?.Invoke();
     }
 }

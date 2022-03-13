@@ -25,7 +25,8 @@ public class Service : SingletonGameObject<Service> {
 
     // properties
     //-------------------------------------------------------------------------
-    public static bool ready { get; set; }
+    public static bool serviceInitReady { get; set; }
+    public static bool gameUnitReady { get; set; }
     public static Version version { get; set; }
 
     // Services

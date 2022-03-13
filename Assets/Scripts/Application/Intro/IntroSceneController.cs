@@ -34,7 +34,7 @@ public class IntroSceneController : SceneControllerBase, ServiceStatePresenter {
 
         TextLocale.RefreshAll();
 
-        Service.ready = true;
+        Service.serviceInitReady = true;
         Service.quickServiceInit = false;
         SwitchScene(SceneType.Lobby).RunAsync();
     }

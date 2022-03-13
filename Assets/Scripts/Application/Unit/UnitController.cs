@@ -3,20 +3,6 @@ using System.Collections;
 using UnityEngine;
 
 public class UnitController : UnitBase {
-    private Unit originUnit;
-    private Unit targetUnit;
-
-    public int code;
-    [HideInInspector] public int level;
-    private UnitType unitType { get; set; }
-    private JobType jobType { get; set; }
-
-    private float attack { get; set; }
-    private float defense { get; set; }
-    private float hp { get; set; }
-    private float speed { get; set; }
-    private float range { get; set; }
-    
     private Coroutine moveRoutine;
     private Coroutine interactionRoutine;
 
@@ -26,11 +12,11 @@ public class UnitController : UnitBase {
         speed = Service.rule.unitsProperties[code].speed + Service.rule.unitsLvUpProperties[code].GetLvUpSpeed(level);
         range = Service.rule.unitsProperties[code].range + Service.rule.unitsLvUpProperties[code].GetLvUpRange(level);
         unitType = Service.rule.units[code].unitType;
+        unitId = originUnit.unitId;
 
         if (!Service.unit.selectedUnits.ContainsKey(originUnit)) {
             Service.unit.selectedUnits.Add(originUnit, this);
-        } else {
-            Debug.LogError("key 중복:" + originUnit.unitId);
+            Service.unit.OnUpdateSetUnit();
         }
     }
 
@@ -39,12 +25,6 @@ public class UnitController : UnitBase {
         originUnit = unit;
 
         ReadyData();
-    }
-
-    private Unit GetUnit() {
-        if (originUnit != null) {
-            return originUnit;
-        } return null;
     }
 
     public void Update() {
@@ -120,13 +100,5 @@ public class UnitController : UnitBase {
                 break;
             }
         }
-    }
-
-    public void OnDead() {
-        gameObject.SetActive(false);
-    }
-
-    public int GetUnitCode() {
-        return code;
     }
 }

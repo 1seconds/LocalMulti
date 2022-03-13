@@ -60,7 +60,7 @@ public abstract class SceneControllerBase : MonoBehaviour, SceneController {
         Input.multiTouchEnabled = false;
 
         Scene scene = SceneManager.GetActiveScene();
-        if (scene.buildIndex != 0 && Service.ready == false && !forceStart) {
+        if (scene.buildIndex != 0 && Service.serviceInitReady == false && !forceStart) {
             returnScene = this.sceneType;
             SceneManager.LoadScene(0);
             return false;

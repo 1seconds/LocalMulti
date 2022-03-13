@@ -9,8 +9,9 @@ public class StageService : Singleton<StageService>, IService {
     public ServiceType type => ServiceType.Stage;
     
     public event eventSelectedStage selectedStageUpdate;
-    
+
     public async Task<bool> Initialize(ServiceStatePresenter presenter) {
+        selectedStageUpdate = null;
         return true;
     }
 
