@@ -35,7 +35,6 @@ public class HpController : MonoBehaviour {
         for (int i = 0; i < hpSet.childCount; i++) {
             Destroy(hpSet.GetChild(i).gameObject); 
         }
-        
         for (int i = 0; i < allUnits.Count; i++) {
             var prefab = Instantiate(hpItem);
             prefab.gameObject.SetActive(true);

@@ -11,8 +11,8 @@ public class PlayerUnitController : UnitBase {
             selectedUnits[i].SetUnitIndex(i);
             selectedUnits[i].SetUnitId();
             
-            prefab.GetComponent<UnitController>().Display(selectedUnits[i]);
             prefab.transform.SetParent(playerUnitSet);
+            prefab.GetComponent<UnitController>().Display(selectedUnits[i]);
         }
     }
 
