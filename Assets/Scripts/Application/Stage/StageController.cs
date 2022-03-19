@@ -19,7 +19,7 @@ public class StageController : MonoBehaviour {
     }
 
     private void OnUpdateUnit(Unit unit) {
-        skillController.gameObject.SetActive(unit != null);
+        skillController.gameObject.SetActive(true);
         if (unit == null) {
             return;
         }

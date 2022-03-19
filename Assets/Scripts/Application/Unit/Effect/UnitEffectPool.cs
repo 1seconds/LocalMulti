@@ -24,8 +24,6 @@ public class UnitEffectPool : MonoBehaviour {
     private void ShowSelectEffect(Unit unit) {
         if (unit != null) {
             unitEffects[0].OnEffect(unit);
-        } else {
-            unitEffects[0].OffEffect();
             unitEffects[1].OffEffect();
         }
     }
