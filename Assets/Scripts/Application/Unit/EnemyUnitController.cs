@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyUnitController : UnitBase {
+public class EnemyUnitController : MonoBehaviour {
     [SerializeField] private Transform enemyUnitSet;
     [SerializeField] private Transform enemyPool;
     

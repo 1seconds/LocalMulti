@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-public class PlayerUnitController : UnitBase {
+public class PlayerUnitController : MonoBehaviour {
     [SerializeField] private Transform playerUnitSet;
     [SerializeField] private Transform playerPool;
 

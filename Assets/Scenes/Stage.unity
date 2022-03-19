@@ -11854,8 +11854,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hpSet: {fileID: 3508388958096678366}
   hpItem: {fileID: 3508388956923026302}
-  enemyUnitSet: {fileID: 0}
-  playerUnitSet: {fileID: 0}
+  enemyUnitSet: {fileID: 6319107224609754127}
+  playerUnitSet: {fileID: 6319107223137648122}
 --- !u!224 &3508388957732896911
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14091,8 +14091,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c17d9d0887904efb8c18037b30c99a18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  code: 0
-  level: 0
   enemyUnitSet: {fileID: 6319107224609754127}
   enemyPool: {fileID: 6319107223726671002}
 --- !u!212 &6319107223705008492
@@ -14593,8 +14591,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d082651a5ce4f04b12728c52ca336a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  code: 0
-  level: 0
   playerUnitSet: {fileID: 6319107223137648122}
   playerPool: {fileID: 6319107223167704013}
 --- !u!1 &6319107223872730540
